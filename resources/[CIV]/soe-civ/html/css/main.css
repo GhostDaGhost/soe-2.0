@@ -1,0 +1,27 @@
+/* SCUBA GEAR */
+.scuba-container {
+    position: relative;
+}
+
+#empty_scubagear {
+    opacity: 0.0;
+    position: fixed;
+    right: -0.0%;
+    top: 86.8%;
+    margin: 1.12%;
+    margin-left: 2%;
+    width: 3.9%;
+    height: 10%;
+}
+
+#full_scubagear {
+    opacity: 0.0;
+    position: fixed;
+    right: -0.0%;
+    top: 86.8%;
+    margin: 1.12%;
+    margin-left: 2%;
+    width: 3.9%;
+    height: 10%;
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+}

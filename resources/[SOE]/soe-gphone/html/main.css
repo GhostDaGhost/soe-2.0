@@ -1,0 +1,2612 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@-webkit-keyframes Rotate
+{
+ from{-webkit-transform:rotate(0deg);}
+ to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes Rotate
+{
+ from{-moz-transform:rotate(0deg);}
+ to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes Rotate
+{
+ from{-ms-transform:rotate(0deg);}
+ to{-ms-transform:rotate(360deg);}
+}
+@-webkit-keyframes shake {
+   0% { transform: translateX(-5px); }
+   50% { transform: translateX(5px); }
+}
+@keyframes shake {
+   0% { transform: translateX(-5px); }
+   50% { transform: translateX(5px); }
+}
+
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Roboto', sans-serif;
+ }
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.bg-dark-blue {
+    background-color: rgba(20,20,20,0.45)!important
+}
+*:focus {
+    outline: none;
+}
+.top-bar, .app-home {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+.no-focus:focus {
+    outline: 0 !important;
+    outline-style:none;
+    box-shadow:none;
+    border-color:transparent;
+}
+a:hover {
+	text-decoration: none !important;
+}
+/*custom styles*/
+.no-select {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+}
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0);
+}
+/* total width */
+::-webkit-scrollbar {
+    width:6px
+}
+
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color:#babac0;
+    border-radius:16px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {display:none}
+
+.full-width {
+	width: 100%;
+}
+
+.faded {
+	background-color: rgba(255,43,43,0.7);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.notifications-tray {
+    width: 212px;
+    height: 50px;
+    position: absolute;
+    bottom: 2.2%;
+    right: 45.5%;
+    display: flex;
+    align-content: center;
+}
+
+.notifications-tray .tray-icon{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    border: 2px solid #3D403E;
+    display: none;
+}
+
+.call-circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 10%;
+    bottom: 25%;
+    cursor: pointer;
+    z-index: 9999999999;
+    display: none;
+}
+
+.call-circle .icon {
+    padding: 10px 10px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(50,50,50,0.6);
+    border-radius: 50%;
+    color: white;
+
+}
+.call-circle .call-border {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border-radius: 50%;
+    border-top: 4px solid #54a958;
+    border-right: 4px solid #53d769;
+    border-bottom: 4px solid #54a958;
+    border-left: 4px solid #53d769;
+    -webkit-animation-name: Rotate;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+.cardboard {
+    width: 450px;
+    position: absolute;
+    right: 2%;
+    bottom: 4%;
+    transition:bottom 0.4s linear;
+}
+.cardboard.hide {
+    bottom: -110%;
+    transition:bottom 0.4s linear;
+}
+.device {
+    transform: scale(1);
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    transition:bottom 0.3s linear;
+}
+.device.hide {
+    bottom: -110%;
+    transition:bottom 0.3s linear;
+}
+.device.broken .device-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background-image: url('images/broken-glass.png');
+}
+/*Gray Pixel*/
+.device-google-pixel.gray .device-frame {
+    background: #858585;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #858585, inset 0 0 0 6px #5E5E5E, inset 0 0 0 10px #777;
+}
+.device-google-pixel.gray .device-sensors {
+    background: #5E5E5E;
+}
+.device-google-pixel.gray .device-btns {
+    background: #5E5E5E;
+}
+.device-google-pixel.gray .device-power {
+    background: #5E5E5E;
+}
+.device-google-pixel.gray .home-button {
+    background: #777;
+}
+/*Black Pixel*/
+.device-google-pixel.black .device-frame {
+    background: #292929;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #858585, inset 0 0 0 6px #5E5E5E, inset 0 0 0 10px #777;
+}
+.device-google-pixel.black .device-sensors {
+    background: #5E5E5E;
+}
+.device-google-pixel.black .device-btns {
+    background: #5E5E5E;
+}
+.device-google-pixel.black .device-power {
+    background: #5E5E5E;
+}
+.device-google-pixel.black .home-button {
+    background: #5E5E5E;
+}
+/*Pink Pixel*/
+.device-google-pixel.pink .device-frame {
+    background: #DB6982;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #9C4B5C, inset 0 0 0 6px #DB6982, inset 0 0 0 10px #fff;
+}
+.device-google-pixel.pink .device-sensors {
+    background: #fff;
+}
+.device-google-pixel.pink .device-btns {
+    background: #fff;
+}
+.device-google-pixel.pink .device-power {
+    background: #fff;
+}
+.device-google-pixel.pink .home-button {
+    background: #fff;
+}
+/*Blue Pixel*/
+.device-google-pixel.blue .device-frame {
+    background: #0CA2E8;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #0B99DB, inset 0 0 0 6px #086E9E, inset 0 0 0 10px #fff;
+}
+.device-google-pixel.blue .device-sensors {
+    background: #fff;
+}
+.device-google-pixel.blue .device-btns {
+    background: #fff;
+}
+.device-google-pixel.blue .device-power {
+    background: #fff;
+}
+.device-google-pixel.blue .home-button {
+    background: #0A87C2;
+}
+/*Red Pixel*/
+.device-google-pixel.red .device-frame {
+    background: #EB3036;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 6px #9E413E, inset 0 0 0 10px #C2504C;
+}
+.device-google-pixel.red .device-sensors {
+    background: #fff;
+}
+.device-google-pixel.red .device-btns {
+    background: #fff;
+}
+.device-google-pixel.red .device-power {
+    background: #fff;
+}
+.device-google-pixel.red .home-button {
+    background: #9E413E;
+}
+/*Green Pixel*/
+.device-google-pixel.green .device-frame {
+    background: #40DB4D;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #2E9E37, inset 0 0 0 6px #2B9434, inset 0 0 0 10px #fff;
+}
+.device-google-pixel.green .device-sensors {
+    background: #fff;
+}
+.device-google-pixel.green .device-btns {
+    background: #fff;
+}
+.device-google-pixel.green .device-power {
+    background: #fff;
+}
+.device-google-pixel.green .home-button {
+    background: #2B9434;
+}
+
+/*Gold Pixel*/
+.device-google-pixel.gold .device-frame {
+    /*background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);*/
+    background-image: url('images/gold-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #FEDB37, inset 0 0 0 6px #5E5E5E, inset 0 0 0 10px #D1B464;
+}
+.device-google-pixel.gold .device-sensors {
+    background: #777;
+}
+.device-google-pixel.gold .device-btns {
+    background: #777;
+}
+.device-google-pixel.gold .device-power {
+    background: #777;
+}
+.device-google-pixel.gold .home-button {
+    background: #8A6E2F;
+}
+
+/*Anime Pixel*/
+.device-google-pixel.anime .device-frame {
+    /*background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);*/
+    background-image: url('images/anime-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #white, inset 0 0 0 6px #fff, inset 0 0 0 10px #fff;
+}
+.device-google-pixel.anime .device-sensors {
+    background: #777;
+}
+.device-google-pixel.anime .device-btns {
+    background: #777;
+}
+.device-google-pixel.anime .device-power {
+    background: #777;
+}
+.device-google-pixel.anime .home-button {
+    background: #777;
+}
+/*Galaxy Pixel*/
+.device-google-pixel.galaxy .device-frame {
+    background-image: url('images/galaxy-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #858585, inset 0 0 0 6px #5E5E5E, inset 0 0 0 10px #777;
+}
+.device-google-pixel.galaxy .device-sensors {
+    background: #5E5E5E;
+}
+.device-google-pixel.galaxy .device-btns {
+    background: #5E5E5E;
+}
+.device-google-pixel.galaxy .device-power {
+    background: #5E5E5E;
+}
+.device-google-pixel.galaxy .home-button {
+    background: #5E5E5E;
+}
+/*Chrome Pixel*/
+.device-google-pixel.chrome .device-frame {
+    background-image: url('images/chrome-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #858585, inset 0 0 0 6px #5E5E5E, inset 0 0 0 10px #777;
+}
+.device-google-pixel.chrome .device-sensors {
+    background: #5E5E5E;
+}
+.device-google-pixel.chrome .device-btns {
+    background: #5E5E5E;
+}
+.device-google-pixel.chrome .device-power {
+    background: #5E5E5E;
+}
+.device-google-pixel.chrome .home-button {
+    background: #777;
+}
+/*BCSO Pixel*/
+.device-google-pixel.bcso .device-frame {
+    background-image: url('images/bcso-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 54px;
+    box-shadow: inset 0 0 0 2px #858585, inset 0 0 0 6px #5E5E5E, inset 0 0 0 10px #777;
+}
+.device-google-pixel.bcso .device-sensors {
+    background: #5E5E5E;
+}
+.device-google-pixel.bcso .device-btns {
+    background: #5E5E5E;
+}
+.device-google-pixel.bcso .device-power {
+    background: #5E5E5E;
+}
+.device-google-pixel.bcso .home-button {
+    background: #777;
+}
+
+/*Generic Device*/
+.device-google-pixel .device-sensors::after {
+    display: none;
+}
+.device-content {
+    background: rgb(63,94,251);
+    background: linear-gradient(326deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    z-index: 9999999;
+}
+.device-content .bg-light {
+    background-color: #F2F2F2 !important;
+}
+.app-home.custom-background {
+    background: rgb(63,94,251);
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.top-bar .row, .top-bar .col {
+    padding: 0;
+}
+.top-bar {
+    height: 30px;
+    padding: 5px 10px;
+    /*background-color: #777;*/
+    width: 100%;
+    color: white;
+}
+.top-bar.solid{
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+.top-bar .signal {
+    float: left;
+}
+.top-bar .battery {
+    float: right;
+    font-size: 1.2rem;
+}
+.top-bar .time {
+    font-size: 0.8rem;
+    text-align: center;
+}
+.top-bar .carrier {
+    padding-left: 25px;
+    font-size: 0.8rem;
+}
+.top-bar .notifications {
+    height: 25px;
+    margin: auto;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    display: inline-block;
+}
+.top-bar .notifications i {
+    margin-top: -20px;
+}
+.app-icon {
+    width: 60px;
+    height: 60px;
+}
+.apps-main {
+    height: 456px;
+}
+.apps-tray {
+    background-color: rgba(0,0,0,0.3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.app-content {
+    height: 542px;
+}
+.apps-main .col, .apps-tray .col {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.app-name {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    height: 28px;
+    line-height: 0.8rem;
+}
+.home-button {
+    display: block;
+    width: 45px;
+    height: 45px;
+    left: 44.5%;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 25px;
+    padding: 0;
+    z-index: 9999999;
+    border-radius: 160px;
+    border: 1.5px solid rgba(51,51,51,.75);
+    background: #C0C0C0;
+    background: linear-gradient(to bottom, #C0C0C0 0%, #B1B1B1 100%);
+}
+.back-button * {
+    color: #147efb;
+    font-size: 1.5rem;
+    vertical-align: center;
+}
+
+/*Lock Screen*/
+.device .device-content.app-lockscreen{
+    background: #696969;
+    background-image: linear-gradient(-225deg, #2CD8D5 0%, #6B8DD6 48%, #8E37D7 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.device .device-content.app-lockscreen:before {
+  content: "";
+  position: absolute;
+  left: 0; 
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  background: rgba(0,0,0,.7);
+  -webkit-box-shadow: inset 0px 0px 32px 38px rgba(0,0,0,0.51); 
+box-shadow: inset 0px 0px 32px 38px rgba(0,0,0,0.51);
+}
+.app-lockscreen .pin-input{
+    background: none;
+    border: none;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+.app-lockscreen .pin-input.shake{
+    color: #fc3d39;
+    -webkit-animation: shake .2s linear 0s 4;
+    animation: shake .2s linear 0s 4;
+}
+.app-lockscreen .keypad {
+    margin-left:15px;
+    margin-right:15px;
+}
+.app-lockscreen .pin-number-key{
+    display: block;
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+    background-color: rgba(120,120,120,0.5);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 60px;
+    margin: 4px auto;
+}
+.app-lockscreen .pin-number-key.pin-submit-key{
+    background-color: #53d769;
+    color: white;
+    font-size: 1.6rem;
+}
+.app-lockscreen .pin-number-key.pin-clear-key{
+    background-color: #fecb2e;
+    color: white;
+    font-size: 1.6rem;
+}
+.app-lockscreen .keypad .col{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+.app-lockscreen input::-webkit-outer-spin-button,
+.app-lockscreen input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*Settings App*/
+.device .device-content.app-settings{
+    background: #f8f9fa;
+}
+
+.settings-pin {
+    -webkit-text-security: disc;
+}
+
+.app-settings .copy-button {
+    font-size: 0.7rem;
+    background-color: #B0AFAE;
+    float: right;
+    padding: 2px 4px;
+    margin-top: 2px;
+    color: white;
+}
+.app-settings .copy-button:active  {
+    background-color: #636362;
+}
+.app-settings input::-webkit-outer-spin-button,
+.app-settings input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.app-settings .app-content {
+    overflow-y: auto;
+    padding-bottom: 25px;
+}
+
+/*Texts App*/
+.device .device-content.app-texts{
+    background: #f8f9fa;
+}
+.app-texts .text-snippet {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.app-texts .message {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.app-texts .message p {
+    margin-bottom: 4px;
+}
+.app-texts .new-text {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #147efb;
+}
+.app-texts .app-content {
+    overflow-y: auto;
+}
+/*Texts View*/
+.device .device-content.app-texts-view{
+    background: #f8f9fa;
+}
+.app-texts-view .top-row {
+    height: 60px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.app-texts-view .top-row *{
+    vertical-align: middle;
+    line-height: 60px;
+}
+.app-texts-view .top-row .return-call{
+    vertical-align: middle;
+    line-height: 10px;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #147efb;
+}
+.app-texts-view .top-row .text-reply-title{
+    width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.app-texts-view .text-history {
+    display: block;
+    background-color: #fff;
+}
+.app-texts-view .text-time {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+.app-texts-view .outbound .text-time{
+    color: rgba(255,255,255,0.7);
+}
+.app-texts-view .inbound .text-time{
+    color: rgba(0,0,0,0.7);
+}
+.app-texts-view .text-history .text-history-messages {
+    height: 482px;
+    background-color: #fff;
+    overflow-y: auto;
+    padding-bottom: 80px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+.app-texts-view .message {
+    display: inline-block;
+    font-size: 0.9rem;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 8px 15px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.app-texts-view .outbound {
+    background-color: #147efb;
+    margin-left: 85px;
+    color: white;
+}
+.app-texts-view .inbound {
+    background-color: #eee;
+    color: #333;
+}
+.app-texts-view .text-toolbar {
+    position: absolute;
+    height: 65px;
+    bottom: 0;
+    left: 15px;
+    width: 100%;
+}
+.app-texts-view .text-input {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    resize: none;
+    height: 32px;
+    padding-left: 10px;
+    padding-right: 40px;
+    border-radius: 20px;
+    border: 1.5px solid #C6C6C8!important;
+    color: #343a40;
+    font-size: 0.9rem;
+    width: 295px;
+    line-height: 1.5rem;
+    max-height: 4.5rem;
+    transition:height 0.1s ease-in-out;
+    vertical-align: middle;
+    background-color: rgba(255,255,255,0.9);
+}
+.app-texts-view .text-submit {
+    position: absolute;
+    bottom: 8px;
+    right: 18px;
+    color: #147efb;
+    font-size: 1.1rem;
+}
+.app-texts-view .text-input::-webkit-scrollbar {
+    display: none;    
+}
+
+/*Texts Compose*/
+.device .device-content.app-texts-new{
+    background: #f8f9fa;
+}
+.app-texts-new .top-row {
+    height: 60px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.app-texts-new .top-row *{
+    vertical-align: middle;
+    line-height: 60px;
+}
+.app-texts-new .text-body {
+    height: 482px;
+    display: block;
+    background-color: #fff;
+}
+.app-texts-new .text-compose-number {
+    padding: 10px;
+    border: none;
+    color: #343a40;
+    font-size: 0.9rem;
+    width: 100%;
+}
+.app-texts-new .text-compose {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    resize: none;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 40px;
+    padding-top: 5px;
+    border-radius: 20px;
+    border: 1.5px solid #C6C6C8!important;
+    color: #343a40;
+    font-size: 0.9rem;
+    width: 295px;
+    line-height: 1.5rem;
+    transition:height 0.1s ease-in-out;
+    vertical-align: middle;
+    background-color: rgba(255,255,255,0.9);
+}
+.app-texts-new .text-submit {
+    position: absolute;
+    bottom: 10px;
+    right: 18px;
+    color: #147efb;
+    font-size: 1.1rem;
+}
+.app-texts-new .text-input::-webkit-scrollbar {
+    display: none;    
+}
+
+
+/*Phone App*/
+.device .device-content.app-phone{
+    background: #f8f9fa;
+}
+.app-phone .call {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.app-phone .call p {
+    margin-bottom: 0px;
+}
+.app-phone .new-call {
+    margin-top: 5px;
+    color: #147efb;
+}
+.app-phone .return-call {
+    font-size: 1rem;
+    color: #147efb;
+    float: left;
+    padding: 5px 5px;
+}
+.app-phone .app-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.app-phone .inbound {
+    color: #53d769;
+    font-size: 1.2rem;
+    transform: rotate(45deg);
+}
+.app-phone .outbound {
+    color: #147efb;
+    font-size: 1.2rem;
+    transform: rotate(-135deg);
+}
+.app-phone .call-from {
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.app-phone .col-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*Phone Receive Call*/
+.call-status {
+    font-size: 0.9rem;
+    color: #f8f9fa;
+}
+.device .device-content.app-phone-receive{
+    background: #09203f;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    
+}
+.app-phone-receive .accept-call{
+    display: block;
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    background-color: #53d769;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 60px;
+}
+.app-phone-receive .reject-call{
+    display: block;
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    background-color: #fc3d39;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 60px;
+}
+.app-phone-receive .message-caller{
+    display: block;
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 60px;
+    text-align: center;
+}
+.app-phone-receive .message-caller p{
+    font-size: 0.8rem;
+}
+.app-phone-receive .call-buttons{
+    margin-top: 224px;
+}
+/*Phone Make Call*/
+.device .device-content.app-phone-make{
+    background: #09203f;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    
+}
+.app-phone-make .reject-call{
+    display: block;
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    background-color: #fc3d39;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 60px;
+}
+.app-phone-make .message-caller{
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 60px;
+    text-align: center;
+}
+.app-phone-make .message-caller p{
+    font-size: 0.8rem;
+}
+.app-phone-make .call-buttons{
+    margin-top: 224px;
+}
+/*Phone New Call*/
+.device .device-content.app-phone-new{
+    background: #f8f9fa;
+}
+.app-phone-new .call-number{
+    background: none;
+    border: none;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+}
+.app-phone-new .keypad {
+    margin-left:15px;
+    margin-right:15px;
+}
+.app-phone-new .dial-number-key{
+    display: block;
+    height: 75px;
+    width: 75px;
+    padding: 10px;
+    background-color: #E5E5E5;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 60px;
+    margin: 4px auto;
+}
+.app-phone-new .dial-number-key small{
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+.app-phone-new .dial-number-key.dial-call-key{
+    background-color: #53d769;
+    color: white;
+    font-size: 1.6rem;
+}
+.app-phone-new .keypad .col{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/* Contacts App */
+.device .device-content.app-contacts{
+    background: #f8f9fa;
+}
+.app-contacts .contact {
+    position: relative;
+    padding: 15px;
+}
+.app-contacts .contact p {
+    margin: 0;
+}
+.app-contacts .contact-name {
+    margin: 0;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.app-contacts .contact-icon {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    color: #343a40;
+}
+.app-contacts .contact-icon i {
+    color: #147efb;
+}
+.app-contacts .contact-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.app-contacts .contact-row i{
+    color: #147efb;
+}
+.app-contacts .new-contact {
+    margin-top: 5px;
+    color: #147efb;
+}
+.app-contacts .app-content {
+    overflow-y: auto;
+}
+/* Contacts View */
+.device .device-content.app-contacts-view{
+    background: #f8f9fa;
+}
+.app-contacts-view .top-row *{
+    vertical-align: middle;
+    line-height: 60px;
+}
+.app-contacts-view .app-content {
+    overflow-y: auto;
+}
+.app-contacts-view .action-button i {
+    font-size: 1.3rem;
+    color: #147efb;
+    padding: 5px 5px;
+}
+/* Contacts Edit */
+.device .device-content.app-contacts-edit{
+    background: #f8f9fa;
+}
+.app-contacts-edit .top-row *{
+    vertical-align: middle;
+    line-height: 60px;
+}
+.app-contacts-edit .app-content {
+    overflow-y: auto;
+}
+.app-contacts-edit .contact-save, .app-contacts-edit .contact-delete {
+    display: block;
+    width: 80px;
+    /*margin: 0 auto;*/
+    background-color: red;
+    color: white;
+}
+.app-contacts-edit .contact-save {
+    float: right;
+    background-color: #53d769;
+}
+.app-contacts-edit .contact-delete {
+    float: left;
+    background-color: #fc3d39;
+}
+/* Contacts New */
+.device .device-content.app-contacts-new{
+    background: #f8f9fa;
+}
+.app-contacts-new .top-row *{
+    vertical-align: middle;
+    line-height: 60px;
+}
+.app-contacts-new .app-content {
+    overflow-y: auto;
+}
+.app-contacts-new .new-contact-save {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #53d769;
+    color: white;
+}
+
+/*Calculator App*/
+.device .device-content.app-calculator{
+    background: #f8f9fa;
+}
+.app-calculator .calculator-input{
+    background: none;
+    border: none;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+}
+.app-calculator .keypad {
+    margin-left:15px;
+    margin-right:15px;
+}
+.app-calculator .calculator-number-key{
+    display: block;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    background-color: #E5E5E5;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 60px;
+    margin: 4px auto;
+}
+.app-calculator .calculator-number-key.function-key{
+    background-color: #fecb2e;
+    color: white;
+}
+.app-calculator .calculator-number-key.operator-key{
+    background-color: #fd9426;
+    color: white;
+}
+.app-calculator .calculator-number-key.number-key{
+    color: black;
+}
+.app-calculator .calculator-number-key.equals-key{
+    height: 60px;
+    width: 133px;
+    background-color: #53d769;
+    color: white;
+}
+.app-calculator .keypad .col, .app-calculator .keypad .col-6{
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/*Weather App*/
+.device .device-content.app-weather{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.device-content.app-weather.sunny {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+.device-content.app-weather.cloudy {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
+}
+.device-content.app-weather.rain {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+.app-weather .top-bar {
+    color: white;
+}
+.app-weather hr {
+    border-color: white;
+}
+.app-weather .weather-temp {
+    font-size: 4rem;
+}
+.app-weather .weather-icon {
+    font-size: 5rem;
+}
+
+/*Bleeter App*/
+.device .device-content.app-bleeter{
+    background: #3FB6D0;
+}
+.app-bleeter .bleeter-font {
+    font-family: 'Fredoka One', cursive;
+}
+.app-bleeter .top-bar {
+    color: white;
+    background-color: #43A047;
+}
+.app-bleeter .top-section {
+    display: block;
+    color: white;
+    background-color: #43A047;
+    height: 50px;
+}
+.app-bleeter .top-section .bleeter-font {
+    margin-bottom: 0;
+}
+.app-bleeter .top-section .bleeter-name {
+    text-align: center;
+    margin-top: -4px;
+    font-size: 0.8rem;
+}
+.app-bleeter .bleeter-home {
+    cursor: pointer;
+}
+.app-bleeter .bleeter-footer {
+    padding-top: 5px;
+    width: 100%;
+    background-color: #43A047;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+.app-bleeter .bleeter-feed {
+    height: 452px;
+    overflow-y: auto;
+    padding-bottom: 15px;
+}
+.app-bleeter .bleeter-feed::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color:#4DDEFF;
+    border-radius:16px;
+}
+.app-bleeter .bleeter-footer .bleeter-logo {
+    height: 40px;
+}
+.app-bleeter .bleeter-footer .bleeter-action {
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.app-bleeter .bleeter-card {
+    background-color: #0BA5C7;
+    border-color: #0BA5C7;
+    padding: 10px 10px;
+}
+.app-bleeter .bleeter-card hr {
+    border-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.app-bleeter .bleeter-card .bleeter-username {
+    font-size: 1.2rem;
+}
+.app-bleeter .bleeter-card .bleet-content {
+    font-size: 1rem;
+}
+.app-bleeter .bleeter-card .bleet-timestamp {
+    color: #4DDEFF;
+}
+.app-bleeter .bleeter-emoji {
+    display: inline;
+    width: 25px;
+}
+/*Bleeter Signin*/
+.device .device-content.app-bleeter-signin{
+    background: #3FB6D0;
+}
+.app-bleeter-signin .bleeter-font {
+    font-family: 'Fredoka One', cursive;
+}
+.app-bleeter-signin .top-bar {
+    color: white;
+    background-color: #43A047;
+}
+.app-bleeter-signin .top-section {
+    display: block;
+    color: white;
+    background-color: #43A047;
+    height: 40px;
+}
+.app-bleeter-signin .bleeter-home {
+    cursor: pointer;
+}
+.app-bleeter-signin .bleeter-footer {
+    padding-top: 5px;
+    width: 100%;
+    background-color: #43A047;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+.app-bleeter-signin .bleeter-footer .bleeter-logo {
+    height: 40px;
+}
+.app-bleeter-signin .bleeter-footer .bleeter-action {
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.app-bleeter-signin .bleeter-tabs .nav-link.active {
+    color: white;
+    background-color: transparent;
+    border:none;
+}
+.app-bleeter-signin .bleeter-tabs .nav-link {
+    color: #4DDEFF;
+    background-color: transparent;
+    border:none;
+}
+.app-bleeter-signin .bleeter-tabs .nav-link:hover {
+    color: white;
+    background-color: transparent;
+    border:none;
+}
+.app-bleeter-signin .bleeter-button {
+    background-color: #4DDEFF;
+    color: white;
+}
+.app-bleeter-signin .bleeter-notification.bleeter-error {
+    color: #F02718;
+    font-size: 1.3rem;
+}
+.app-bleeter-signin .bleeter-notification.bleeter-success {
+    color: #43A047;
+    font-size: 1.3rem;
+}
+
+/*Bleeter Bleet*/
+.device .device-content.app-bleeter-bleet{
+    background: #3FB6D0;
+}
+.app-bleeter-bleet .bleeter-font {
+    font-family: 'Fredoka One', cursive;
+}
+.app-bleeter-bleet .top-bar {
+    color: white;
+    background-color: #43A047;
+}
+.app-bleeter-bleet .top-section {
+    display: block;
+    color: white;
+    background-color: #43A047;
+    height: 50px;
+}
+.app-bleeter-bleet .top-section .bleeter-font {
+    margin-bottom: 0;
+}
+.app-bleeter-bleet .top-section .bleeter-name {
+    text-align: center;
+    margin-top: -4px;
+    font-size: 0.8rem;
+}
+.app-bleeter-bleet .bleeter-home {
+    cursor: pointer;
+}
+.app-bleeter-bleet .bleeter-footer {
+    padding-top: 5px;
+    width: 100%;
+    background-color: #43A047;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+.app-bleeter-bleet .bleeter-footer .bleeter-logo {
+    height: 40px;
+}
+.app-bleeter-bleet .bleeter-footer .bleeter-action {
+    color: white;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.app-bleeter-bleet .bleeter-button {
+    background-color: #4DDEFF;
+    color: white;
+}
+.app-bleeter-bleet .readonly {
+    background-color: #8e8e93;
+    color: white;
+}
+.app-bleeter-bleet textarea {
+    resize: none;
+    padding-bottom: 40px;
+}
+.app-bleeter-bleet .app-content {
+    overflow-y: auto;
+    height: 492px;
+}
+.app-bleeter-bleet .bleeter-emoji {
+    float: right;
+    display: inline;
+    width: 25px;
+}
+.app-bleeter-bleet .bleeter-emoji-popup {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    width: 95%;
+    left: 2.5%;
+    top: -310px;
+    background-color: #43A047;
+    color: white;
+    z-index: 9;
+    height: 370px;
+}
+.app-bleeter-bleet .bleeter-emoji-close {
+    cursor: pointer;
+    color: white;
+    font-size: 1.4rem;
+}
+.app-bleeter-bleet .bleeter-emoji-button {
+    position: absolute;
+    z-index: 9;
+    background-color: rgba(50,50,50,0.4);
+    color: white;
+    top: -50px;
+    left: 18px;
+}
+
+/*Notes App*/
+.device .device-content.app-notes{
+    background: #f8f9fa;
+}
+.app-notes .notes-container {
+    padding-bottom: 20px;
+}
+.app-notes .note {
+    position: relative;
+    margin-top: 20px;
+    background-color: #F5E687;
+    padding: 15px;
+}
+.app-notes .note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #f2dd65 #f8f9fa;
+}
+.app-notes .note p {
+    margin-bottom: 4px;
+}
+.app-notes .new-note {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #147efb;
+}
+.app-notes .app-content {
+    overflow-y: auto;
+}
+.app-notes .delete-note {
+    color: #fc3d39;
+}
+.app-notes .edit-note {
+    color: #53d769;
+}
+/*Notes New*/
+.device .device-content.app-notes-new{
+    background: #f8f9fa;
+}
+.app-notes-new .new-note-container {
+    padding-bottom: 20px;
+}
+.app-notes-new .new-note-content {
+    width: 100%;
+    background: none;
+    border: none;
+}
+.app-notes-new .note {
+    position: relative;
+    margin-top: 20px;
+    background-color: #F5E687;
+    padding: 15px;
+}
+.app-notes-new .note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #f2dd65 #f8f9fa;
+}
+.app-notes-new .note p {
+    margin-bottom: 4px;
+}
+.app-notes-new .new-note {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #147efb;
+}
+.app-notes-new .app-content {
+    overflow-y: auto;
+}
+/*Notes Edit*/
+.device .device-content.app-notes-edit{
+    background: #f8f9fa;
+}
+.app-notes-edit .edit-note-container {
+    padding-bottom: 20px;
+}
+.app-notes-edit .edit-note-content {
+    width: 100%;
+    background: none;
+    border: none;
+}
+.app-notes-edit .note {
+    position: relative;
+    margin-top: 20px;
+    background-color: #F5E687;
+    padding: 15px;
+}
+.app-notes-edit .note:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  border-width: 0 16px 16px 0;
+  border-style: solid;
+  border-color: #f2dd65 #f8f9fa;
+}
+.app-notes-edit .note p {
+    margin-bottom: 4px;
+}
+.app-notes-edit .save-note {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #147efb;
+}
+.app-notes-edit .app-content {
+    overflow-y: auto;
+}
+/*Clock App*/
+.device .device-content.app-clock{
+    background: #f8f9fa;
+}
+.app-clock .clock-tabs {
+    background: #f8f9fa;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+}
+.app-clock .clock-tabs .nav-item {
+    width: 95px;
+}
+.app-clock .nav-link {
+    color: #777;
+}
+.app-clock .nav-link {
+    width: 90%;
+    margin: 0 auto;
+}
+.app-clock .city {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 10px;
+    padding: 6px;
+    color: white;
+    background-image: url('images/city-pb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.app-clock .city.pb {
+    background-image: url('images/city-pb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.app-clock .city.ls {
+    background-image: url('images/city-ls.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.app-clock .city.lc {
+    background-image: url('images/city-lc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.app-clock .city.sf {
+    background-image: url('images/city-sf.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.app-clock .city.lv {
+    background-image: url('images/city-lv.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.app-clock .city.vc {
+    background-image: url('images/city-vc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.app-clock #clock-home hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.app-clock #clock-home h3 {
+    font-size: 1.2rem;
+}
+.app-clock #clock-home p {
+    font-weight: bold;
+}
+.app-clock .nav-link:active {
+    background-color: #147efb;
+}
+.app-clock .nav-link.active {
+    background-color: #147efb;
+}
+.app-clock .clock-tabs i {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.app-clock .clock-tabs small {
+    text-align: center;
+    display: block;
+    font-size: 0.7rem;
+}
+.app-clock #clock-stopwatch{
+    color: #777;
+}
+.app-clock .laps-title{
+    color: #777;
+    text-align: center;
+    margin-top: 25px;
+}
+.app-clock #clock-stopwatch .stopwatch-time {
+    font-size: 3rem;
+    text-align: center;
+    color: #777;
+}
+.app-clock .stopwatch-buttons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.app-clock .stopwatch-buttons .btn {
+    width: 70px;
+    background-color: #A8A8A8;
+    color: white;
+    margin: 0 auto;
+}
+.app-clock .stopwatch-buttons .btn-start {
+    background-color: #53d769;
+}
+.app-clock .stopwatch-buttons .btn-stop {
+    background-color: #fc3d39;
+}
+.app-clock .stopwatch-buttons .btn-lap {
+    background-color: #147efb;
+}
+.app-clock #clock-timer .input-group{
+    width: 49%;
+    display: inline-block;
+}
+.app-clock #clock-timer .timer-time{
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+}
+.app-clock #clock-timer .input-group input{
+    width: 100%;
+    border-radius: 0;
+    font-size: 1.5rem;
+}
+.app-clock #clock-timer .input-group label{
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.app-clock .timer-buttons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.app-clock .timer-buttons .btn {
+    width: 90px;
+    background-color: #A8A8A8;
+    color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.app-clock .timer-buttons .btn-timer-start {
+    background-color: #53d769;
+}
+.app-clock .timer-buttons .btn-timer-stop {
+    background-color: #fc3d39;
+}
+.app-clock .app-content {
+    overflow-y: auto;
+    height: 458px;
+}
+
+/*Valet App*/
+.device .device-content.app-valet{
+    background: #e5403d;
+    color: white;
+}
+.app-valet .top-bar {
+    color: white;
+    background-color: #e5403d;
+}
+.app-valet .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-valet .valet-search {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    padding-left: 0px;
+    border-radius: 0;
+}
+.app-valet .valet-search::placeholder {
+    color: white;
+}
+.app-valet .vehicles-container {
+    width: 100%;
+}
+.app-valet .vehicles-container p{
+    margin-bottom: 0;
+}
+.app-valet .vehicles-container .vehicle {
+    width: 100%;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    background-color: #CC3A37;
+}
+.app-valet .vehicles-container .vehicle-model small {
+    display: inline-block;
+    font-size: 0.8rem;
+}
+.app-valet .vehicles-container .vehicle-location {
+    font-size: 0.8rem;
+}
+
+/* Email Top Section */
+.emails-top-section .navbar-toggler {
+    color: white;
+}
+.emails-top-section {
+    background-color: #00728D;
+    color: white;
+}
+.emails-top-section .emails-logo {
+    width: 108px;
+    right: 100px;
+    position: absolute;
+    cursor: pointer;
+}
+.emails-top-section .emails-new {
+    right: 10px;
+    position: absolute;
+    font-size: 1.5rem;
+    color: #f8be00;
+}
+.emails-top-section .emails-menu a {
+    color: white;
+}
+.emails-top-section .emails-menu .nav-link {
+    padding-left: 0;
+}
+.emails-top-section .emails-menu .menu-title {
+    color: #b4e3f3;
+}
+/*Emails App*/
+.device .device-content.app-emails{
+    background: #f8f9fa;
+}
+.app-emails .top-bar {
+    color: white;
+    background-color: #00728D;
+}
+.app-emails .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.emails-top-section .emails-menu a {
+    color: white;
+}
+.emails-top-section .emails-menu .nav-link {
+    padding-left: 0;
+}
+.emails-top-section .emails-menu .menu-title {
+    color: #b4e3f3;
+}
+.app-emails .nav-tabs{
+    border:none;
+}
+.app-emails .nav-tabs .nav-item .nav-link{
+    font-size: 1.2rem;
+    color: #b4e3f3;
+    background-color: unset;
+    border:none;
+}
+.app-emails .nav-tabs .nav-item .nav-link:focus, .app-emails .nav-tabls .nav-item .nav-link:hover,{
+    border:none;
+}
+.app-emails .nav-tabs .nav-item .nav-link.active{
+    color: #00728D;
+    border-bottom: 2px solid #00728D;
+}
+.app-emails .emails-inbox-search, .app-emails .emails-outbox-search {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #00728D;
+    padding-left: 9px;
+    border-radius: 0;
+}
+.app-emails .emails-inbox-search::placeholder, .app-emails .emails-outbox-search::placeholder {
+    color: #00728D;
+}
+.app-emails .email-inbound-container {
+    padding-top: 10px;
+}
+.app-emails .email {
+    display: block;
+    position: relative;
+    padding: 10px;
+}
+.app-emails .email:hover {
+    cursor: pointer;
+}
+.app-emails .email .email-from {
+    margin: 0;
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #F8BE00;
+}
+.app-emails .email .email-snippet {
+    margin: 0;
+    font-size: 0.8rem;
+    width: 230px;
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.app-emails .email .email-date {
+    font-size: 0.8rem;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #00728D;
+    font-weight: bold;
+}
+.app-emails .email .email-time {
+    font-size: 0.8rem;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+/*Emails Compose*/
+.device .device-content.app-emails-compose{
+    background: #f8f9fa;
+}
+.app-emails-compose .top-bar {
+    color: white;
+    background-color: #00728D;
+}
+.app-emails-compose .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-emails-compose hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.app-emails-compose .form-group {
+    margin-bottom: 0;
+}
+.app-emails-compose textarea {
+    resize: none;
+}
+.app-emails-compose .emails-compose-send {
+    right: 10px;
+    position: absolute;
+    font-size: 1.5rem;
+    color: #f8be00;
+}
+
+/*Emails View*/
+.device .device-content.app-emails-view{
+    background: #f8f9fa;
+}
+.app-emails-view .top-bar {
+    color: white;
+    background-color: #00728D;
+}
+.app-emails-view .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-emails-view hr {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.app-emails-view .form-group {
+    margin-bottom: 0;
+}
+.app-emails-view textarea {
+    resize: none;
+}
+.app-emails-view .emails-reply {
+    right: 10px;
+    position: absolute;
+    font-size: 1.5rem;
+    color: #f8be00;
+}
+.app-emails-view .email-view-address {
+    font-weight: bold;
+    margin: 0;
+    width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.app-emails-view .email-view-date {
+    margin: 0;
+    font-size: 0.8rem;    
+}
+.app-emails-view .email-view-content {
+    width: 280px;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/*Emails Signin*/
+.device .device-content.app-emails-signin{
+    background: #00728D;
+}
+.app-emails-signin .top-bar {
+    color: white;
+    background-color: #00728D;
+}
+.app-emails-signin .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-emails-signin .emails-logo {
+    width: 108px;
+    right: 100px;
+    position: absolute;
+    cursor: pointer;
+}
+.app-emails-signin .bottom-section {
+    padding-top: 100px;
+}
+.app-emails-signin .emails-notification {
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: -120px;
+    left: 0;
+}
+.app-emails-signin .emails-notification.error {
+    color: #fc3d39;
+}
+.app-emails-signin .emails-notification.success {
+    color: #53d769;
+}
+.app-emails-signin .nav-tabs{
+    border:none;
+}
+.app-emails-signin .nav-tabs .nav-item .nav-link{
+    font-size: 1.2rem;
+    color: #b4e3f3;
+    background-color: unset;
+    border:none;
+}
+.app-emails-signin .nav-tabs .nav-item .nav-link:focus, .app-emails-signin .nav-tabls .nav-item .nav-link:hover,{
+    border:none;
+}
+.app-emails-signin .nav-tabs .nav-item .nav-link.active{
+    color: white;
+    border-bottom: 2px solid #00728D;
+}
+.app-emails-signin .input-group-text, .app-emails-signin input {
+    font-size: 0.8rem;
+}
+.app-emails-signin .emails-register-submit {
+    background-color: #f8be00;
+    color: #00728D;
+}
+.app-emails-signin .emails-signin-submit {
+    background-color: #b4e3f3;
+    color: #00728D;
+}
+
+/*Fleeca App*/
+.device .device-content.app-fleeca{
+    background: white;
+}
+.app-fleeca .top-bar {
+    color: white;
+    background-color: #269246;
+}
+.app-fleeca .top-section {
+    height: 50px;
+    color: white;
+    background-color: #269246;
+    position: relative;
+}
+.app-fleeca .top-section .fleeca-logo {
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 26%;
+}
+.app-fleeca .app-content {
+    height: 542px;
+    position: relative;
+}
+.app-fleeca .middle-content {
+    overflow-y: auto;
+    height: 442px;
+    position: relative;
+}
+.app-fleeca .middle-content::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color:#269246;
+    border-radius:16px;
+}
+.app-fleeca .middle-content::-webkit-scrollbar-track {
+    background-color: white;
+}
+.app-fleeca .bottom-footer {
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #269246;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    vertical-align: middle;
+}
+.app-fleeca .bottom-footer .footer-button {
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-top: 7px;
+}
+.app-fleeca .bottom-footer .footer-button.readonly{
+    cursor: default;
+    color: #A7A8A8;
+}
+.app-fleeca .bottom-footer .footer-button i {
+    font-size: 1.4rem;
+}
+.app-fleeca .bottom-footer .footer-button small {
+    font-size: 0.7rem;
+}
+.app-fleeca .accounts-container {
+    background-color: white;
+    padding: 15px;
+}
+.app-fleeca .accounts-container .account {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.app-fleeca .accounts-container .account p{
+    margin: 0;
+}
+.app-fleeca .accounts-container .account i{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    font-size: 1.4rem;
+    color: #777;
+}
+.app-fleeca .accounts-container .account .account-name {
+    font-size: 1.1rem;
+    color: #269246;
+}
+.app-fleeca .accounts-container .account .account-balance {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.app-fleeca .accounts-container .account .account-details {
+    display: flex;
+    font-size: 0.8rem;
+}
+.app-fleeca .accounts-container .account .account-number {
+    padding-left: 3px;
+}
+
+/*Fleeca New Account*/
+.device .device-content.app-fleeca-newaccount{
+    background: white;
+}
+.app-fleeca-newaccount .top-bar {
+    color: white;
+    background-color: #269246;
+}
+.app-fleeca-newaccount .top-section {
+    height: 50px;
+    color: white;
+    background-color: #269246;
+    position: relative;
+}
+.app-fleeca-newaccount .top-section .fleeca-logo {
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 26%;
+}
+.app-fleeca-newaccount .app-content {
+    height: 542px;
+    position: relative;
+}
+.app-fleeca-newaccount .middle-content {
+    overflow-y: auto;
+    height: 442px;
+    position: relative;
+}
+.app-fleeca-newaccount .middle-content::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color:#269246;
+    border-radius:16px;
+}
+.app-fleeca-newaccount .middle-content::-webkit-scrollbar-track {
+    background-color: white;
+}
+.app-fleeca-newaccount .bottom-footer {
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #269246;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    vertical-align: middle;
+}
+.app-fleeca-newaccount .bottom-footer .footer-button {
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-top: 7px;
+}
+.app-fleeca-newaccount .bottom-footer .footer-button.readonly{
+    cursor: default;
+    color: #A7A8A8;
+}
+.app-fleeca-newaccount .bottom-footer .footer-button i {
+    font-size: 1.4rem;
+}
+.app-fleeca-newaccount .bottom-footer .footer-button small {
+    font-size: 0.7rem;
+}
+.app-fleeca-newaccount .fleeca-newaccount-submit {
+    background-color: #269246;
+    color: white;
+}
+.app-fleeca-newaccount .fleeca-newaccount-title {
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    font-size: 1.6rem;
+    color: white;
+    background-color: rgba(38,146,70,0.4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Fleeca Transfer*/
+.device .device-content.app-fleeca-transfer{
+    background: white;
+}
+.app-fleeca-transfer .top-bar {
+    color: white;
+    background-color: #269246;
+}
+.app-fleeca-transfer .top-section {
+    height: 50px;
+    color: white;
+    background-color: #269246;
+    position: relative;
+}
+.app-fleeca-transfer .top-section .fleeca-logo {
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 26%;
+}
+.app-fleeca-transfer input::-webkit-outer-spin-button,
+.app-fleeca-transfer input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.app-fleeca-transfer .app-content {
+    height: 542px;
+    position: relative;
+}
+.app-fleeca-transfer .middle-content {
+    overflow-y: auto;
+    height: 442px;
+    position: relative;
+}
+.app-fleeca-transfer .text-error {
+    color: #fc3d39;
+}
+.app-fleeca-transfer .middle-content::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color:#269246;
+    border-radius:16px;
+}
+.app-fleeca-transfer .middle-content::-webkit-scrollbar-track {
+    background-color: white;
+}
+.app-fleeca-transfer .bottom-footer {
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #269246;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    vertical-align: middle;
+}
+.app-fleeca-transfer .bottom-footer .footer-button {
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-top: 7px;
+}
+.app-fleeca-transfer .bottom-footer .footer-button.readonly{
+    cursor: default;
+    color: #A7A8A8;
+}
+.app-fleeca-transfer .bottom-footer .footer-button i {
+    font-size: 1.4rem;
+}
+.app-fleeca-transfer .bottom-footer .footer-button small {
+    font-size: 0.7rem;
+}
+.app-fleeca-transfer .fleeca-transfer-submit {
+    background-color: #269246;
+    color: white;
+}
+.app-fleeca-transfer .fleeca-transfer-title {
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    font-size: 1.6rem;
+    color: white;
+    background-color: rgba(38,146,70,0.4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Yellow Pages Top Section */
+.yellowpages-top-section .navbar-toggler {
+    color: white;
+}
+.navbar-toggler:focus, .navbar-toggler:hover {
+    text-decoration: none;
+    outline: none;
+}
+.yellowpages-top-section {
+    background-color: #FF9200;
+    color: white;
+}
+.yellowpages-top-section .yellowpages-logo {
+    width: 50%;
+    right: 24%;
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+}
+.yellowpages-top-section .yellowpages-logo i{
+    font-size: 3rem;
+    color: white;
+}
+.yellowpages-top-section .yellowpages-new {
+    right: 10px;
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;
+}
+.yellowpages-top-section .yellowpages-menu a {
+    color: white;
+}
+.yellowpages-top-section .yellowpages-menu .nav-link {
+    padding-left: 0;
+}
+.yellowpages-top-section .yellowpages-menu .menu-title {
+    color: #ffc882;
+}
+
+/*Yellow Pages App*/
+.device .device-content.app-yellowpages{
+    background: #f8f9fa;
+}
+.app-yellowpages .top-bar {
+    color: white;
+    background-color: #FF9200;
+}
+.app-yellowpages .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-yellowpages .categories-container .category {
+    position: relative;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #FF9200;
+    font-size: 1.4rem;
+    color: white;
+    padding-left: 70px;
+    cursor: pointer;
+}
+.app-yellowpages .categories-container .category .fas{
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    color: white;
+    font-size: 1.4rem;
+}
+.app-yellowpages .categories-container .category .fad{
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    color: white;
+    font-size: 1.4rem;
+}
+
+/*Yellow Pages View*/
+.device .device-content.app-yellowpages-view{
+    background: #f8f9fa;
+}
+.app-yellowpages-view .top-bar {
+    color: white;
+    background-color: #FF9200;
+}
+.app-yellowpages-view .adverts-search {
+    width: 100%;
+    margin: 10px auto 0px auto;
+    background-color: #FF9200;
+    border: none;
+    border-radius: 0;
+    color: white;
+}
+.app-yellowpages-view .adverts-search::placeholder {
+    color: white;
+}
+.app-yellowpages-view .adverts-container {
+    overflow-x: hidden;
+}
+.app-yellowpages-view .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-yellowpages-view .advert {
+    position: relative;
+    width: 100%;
+    margin: 10px 0px;
+    color: white;
+}
+.app-yellowpages-view .advert-body p{
+    margin: 0;
+}
+.app-yellowpages-view .advert-body {
+    padding: 12px;
+    background-color: #FF9200;
+}
+.app-yellowpages-view .advert-footer {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+    background-color: #FF9200;
+    color: white;
+}
+.app-yellowpages-view .advert-footer button{
+    position: relative;
+    display: block;
+    width: 32%;
+    text-align: right;
+    background-color: #ffc882;
+    margin: 0;
+    color: white;
+}
+.app-yellowpages-view .advert-footer button i{
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    font-size: 1.2rem;
+}
+.app-yellowpages-view .advert-type {
+    color: #ffc882;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.app-yellowpages-view .advert-content {
+    font-size: 0.9rem;
+}
+.app-yellowpages-view .advert-timestamp {
+    font-size: 0.8rem;
+}
+
+/*Yellow Pages Signin*/
+.device .device-content.app-yellowpages-signin{
+    background: #f8f9fa;
+}
+.app-yellowpages-signin .top-bar {
+    color: white;
+    background-color: #FF9200;
+}
+.app-yellowpages-signin .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-yellowpages-signin .yellowpages-notification {
+    margin-top: 80px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    color: black;
+    position: absolute;
+    top: 330px;
+    left: 0;
+}
+.app-yellowpages-signin .yellowpages-notification.error {
+    color: #fc3d39;
+}
+.app-yellowpages-signin .yellowpages-notification.success {
+    color: #53d769;
+}
+.app-yellowpages-signin .nav-tabs{
+    border:none;
+}
+.app-yellowpages-signin a{
+    color: black;
+}
+.app-yellowpages-signin .nav-tabs .nav-item .nav-link{
+    font-size: 1.2rem;
+    background-color: unset;
+    border:none;
+}
+.app-yellowpages-signin .nav-tabs .nav-item .nav-link:focus, .app-yellowpages-signin .nav-tabls .nav-item .nav-link:hover,{
+    border:none;
+}
+.app-yellowpages-signin .nav-tabs .nav-item .nav-link.active{
+    border-bottom: 2px solid #FF9200;
+}
+.app-yellowpages-signin .input-group-text, .app-yellowpages-signin input {
+    font-size: 0.8rem;
+}
+.app-yellowpages-signin .yellowpages-register-submit {
+    background-color: #FF9200;
+    color: white;
+}
+.app-yellowpages-signin .yellowpages-signin-submit {
+    background-color: #FF9200;
+    color: white;
+}
+
+/*Yellow Pages New*/
+.device .device-content.app-yellowpages-new{
+    background: #f8f9fa;
+}
+.app-yellowpages-new .top-bar {
+    color: white;
+    background-color: #FF9200;
+}
+.app-yellowpages-new .app-content {
+    overflow-y: auto;
+    height: 542px;
+}
+.app-yellowpages-new .form-group {
+    position: relative;
+    width: 100%;
+    margin: 10px 0px;
+    color: white;
+    background-color: #FF9200;
+    padding: 12px;
+}
+.app-yellowpages-new .button-group {
+    position: relative;
+    width: 100%;
+    margin: 10px 0px;
+    color: white;
+    padding: 12px;
+}
+.app-yellowpages-new .yellowpages-new-submit {
+    background-color: #FF9200;
+    color:white;
+}
+.app-yellowpages-new .yellowpages-new-content {
+    resize: none;
+}
+.app-yellowpages-new .yellowpages-popup {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    width: 80%;
+    left: 10%;
+    top: 40%;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    z-index: 9;
+    text-align: center;
+}
+
+/*State App*/
+.device .device-content.app-state{
+    background: white;
+}
+.app-state .top-bar {
+    color: white;
+    background-color: #1053AD;
+}
+.app-state .top-section {
+    display: block;
+    color: white;
+    background-color: #1053AD;
+    height: 40px;
+}
+.app-state .top-section h3 {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.app-state .state-container {
+    overflow-y: auto;
+    height: 502px;
+}
+.app-state .card {
+    border-radius: 0;
+    background-color: #F0EFED;
+}
+.app-state .card-header button {
+    color: #1053AD;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.app-state .card-header i {
+    float: right;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+}
+.app-state .card-header .collapsed i {
+    color: #1053AD;
+    font-size: 1.2rem;
+    float: right;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.app-state .debt-title {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.app-state .debt-owed {
+    font-size: 0.8rem;
+}
+.app-state input::-webkit-outer-spin-button,
+.app-state input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.app-state .state-debt-submit {
+    background-color: #1053AD;
+    color: white;
+}
+.app-state .state-debt-notification {
+    display: none;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 15px;
+}
+.app-state .state-debt-notification.error {
+    font-size: 0.8rem;
+    color: #fc3d39;
+}
+.app-state .state-debt-notification.success {
+    font-size: 0.8rem;
+    color: #53d769;
+}
+
+/*Maps App*/
+.device .device-content.app-map{
+    background: white;
+    overflow: hidden;
+}
+.app-map .top-bar {
+    color: white;
+    background-color: #1053AD;
+    z-index: 3;
+}
+.app-map .top-section {
+    display: block;
+    color: white;
+    background-color: #1053AD;
+    height: 40px;
+}
+.app-map .top-section h3 {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.app-map .mapContainer {
+    width: 320px;
+    height: 542px;
+    z-index: 1;
+}

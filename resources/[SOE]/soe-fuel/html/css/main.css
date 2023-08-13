@@ -1,0 +1,80 @@
+* {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url("nui://soe-fuel/html/fonts/digital-7.regular.ttf");
+}
+
+.fuel_activeprice {
+    left: 32%;
+    margin: auto;
+    font-size: 7.5vh;
+    position: absolute;
+    font-family: 'Digital-7';
+}
+
+.fuel_percent {
+    top: 55%;
+    left: 71%;
+    margin: auto;
+    font-size: 4.5vh;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fuel_activepercent {
+    top: 51%;
+    left: 32%;
+    margin: auto;
+    font-size: 7.5vh;
+    position: absolute;
+    font-family: 'Digital-7';
+}
+
+.fuel_price {
+    top: 9%;
+    left: 70%;
+    margin: auto;
+    font-size: 4.5vh;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fuel_dollarsymbol {
+    top: 7%;
+    left: 5%;
+    margin: auto;
+    font-size: 4.5vh;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fuel_statusbox {
+    left: 12%;
+    width: 16vw;
+    height: 22vh;
+    margin: auto;
+    position: absolute;
+    border-radius: 1.5vh;
+    background: linear-gradient(360deg, #69633e, 90%, #2e2e2e) !important;
+}
+
+#fuel_container {
+    width: 29vw;
+    height: 25vh;
+   
+    bottom: 5%;
+    right: -50%;
+    margin: auto;
+    position: absolute;
+ 
+    border-radius: 3vh;
+    background: rgba(0, 0, 0, 0.575);
+ 
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: space-around;
+}

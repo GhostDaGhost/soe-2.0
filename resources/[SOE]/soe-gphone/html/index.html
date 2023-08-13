@@ -1,0 +1,2404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SoE gPhone</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="devices.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="leaflet.css" />
+</head>
+
+<body style="display: block;">
+    <audio class="audio end-call-sound d-none" controls="controls" src="sounds/end-call.ogg"></audio>
+    
+    <div class="notifications-tray no-select">
+    </div>
+    
+    <img src="images/gphone2.png" alt="" class="cardboard hide d-none">
+    <div class="device device-google-pixel hide">
+        <div class="call-circle">
+            <div class="call-border"></div>
+            <div class="icon">
+                <i class="fa fa-phone"></i>
+            </div>
+        </div>
+        <div class="device-frame">
+            <!-- Home Page -->
+            <div class="device-content app-home">
+                <div class="top-bar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <div class="notifications">
+                                </div>
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="apps-main mt-2">
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col">
+                                <img src="images/bleeter2.png" alt="bleeter" class="app-icon" data-app="bleeter">
+                                <small class="text-white text-center app-name">Bleeter</small>
+                            </div>
+                            <div class="col">
+                                <img src="images/state2.png" alt="state" class="app-icon" data-app="state">
+                                <small class="text-white text-center app-name">State</small>
+                            </div>
+                            
+                            <div class="col">
+                                <img src="images/advert3.png" alt="yellow pages" class="app-icon" data-app="yellowpages">
+                                <small class="text-white text-center app-name">Yellow Pages</small>
+                            </div>
+                            <div class="col">
+                                <img src="images/clock.png" alt="clock" class="app-icon" data-app="clock">
+                                <small class="text-white text-center app-name">Clock</small>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col">
+                                <img src="images/weather3.png" alt="weather" class="app-icon" data-app="weather">
+                                <small class="text-white text-center app-name">Weather</small>
+                            </div>
+                            <div class="col">
+                                <img src="images/fleeca.png" alt="fleeca" class="app-icon" data-app="fleeca">
+                                <small class="text-white text-center app-name">Fleeca</small>
+                            </div>
+                            <div class="col">
+                                <img src="images/calculator.png" alt="calculator" class="app-icon" data-app="calculator">
+                                <small class="text-white text-center app-name">Calculator</small>
+                            </div>
+                            <div class="col">
+                                <img src="images/notes2.png" alt="notes" class="app-icon" data-app="notes">
+                                <small class="text-white text-center app-name">Notes</small>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col">
+                                <img src="images/email10.png" alt="emails" class="app-icon" data-app="emails">
+                                <small class="text-white text-center app-name">Emails</small>
+                            </div>
+                            <div class="col">
+                                <img src="images/valet2.png" alt="valet" class="app-icon" data-app="valet">
+                                <small class="text-white text-center app-name">MyValet</small>
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="apps-tray">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <img src="images/phone.png" alt="phone" class="app-icon" data-app="phone">
+                            </div>
+                            <div class="col">
+                                <img src="images/text2.png" alt="text" class="app-icon" data-app="texts">
+                            </div>
+                            <div class="col">
+                                <img src="images/contact2.png" alt="contact" class="app-icon" data-app="contacts">
+                            </div>
+                            <div class="col">
+                                <img src="images/settings2.png" alt="settings" class="app-icon" data-app="settings">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lock Screen -->
+            <div class="device-content d-none app-lockscreen">
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mt-5 mx-auto text-center">
+                                <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="password" maxlength="10" name="pin-input" class="form-control pin-input no-focus clear-input">
+                            </div>
+                        </div>
+                        <div class="keypad mt-5">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="1">1</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="2">2</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="3">3</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="4">4</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="5">5</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="6">6</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="7">7</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="8">8</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="9">9</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn pin-number-key pin-clear-key text-center" data-input="clear">C</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key text-center" data-input="0">0</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn pin-number-key pin-submit-key text-center" data-input="submit"><i class="fa fa-chevron-right"></i></button>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col">
+                                    
+                                </div>
+                                <div class="col">
+                                    
+                                </div>
+                                <div class="col">
+                                    
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings app -->
+            <div class="device-content d-none app-settings">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">Settings</h4>
+                            </div>
+                        </div>
+                        <div class="row bg-light mt-2">
+                            <div class="col">
+                                <h4 class="mt-2 text-muted h5">My Number <button class="btn btn-small copy-button">Copy Number</button></h4>
+                            </div>
+                        </div>
+                        <div class="row bg-light">
+                            <div class="col mt-2 mb-2">
+                                <p class="settings-my-number"></p>
+                            </div>
+                        </div>
+                        <div class="row bg-light mt-2">
+                            <div class="col">
+                                <h4 class="mt-2 text-muted h5">Device Wallpaper</h4>
+                            </div>
+                        </div>
+                        <div class="row bg-light no-select">
+                            <div class="col mt-2 mb-2">
+                                <input type="text" name="background-url" class="form-control background-url" style="color:black;" placeholder="Recommended Size: 350x572">
+                                <button class="btn btn-sm btn-success full-width background-save mt-2">Save</button>
+                            </div>
+                        </div>
+                        <div class="row bg-light mt-2">
+                            <div class="col">
+                                <h4 class="mt-2 text-muted h5">Device PIN</h4>
+                            </div>
+                        </div>
+                        <div class="row bg-light no-select">
+                            <div class="col mt-2 mb-2">
+                                <input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" name="settings-pin" class="form-control settings-pin">
+                                <button class="btn btn-sm btn-success full-width pin-save mt-2">Save</button>
+                            </div>
+                        </div>
+                        <div class="row bg-light mt-2">
+                            <div class="col">
+                                <h4 class="mt-2 text-muted h5">Device Volume</h4>
+                            </div>
+                        </div>
+                        <div class="row bg-light no-select">
+                            <div class="col mt-2 mb-2">
+                                <input type="range" class="device-volume-range full-width settings-volume" min="0" max="10" step="1" id="deviceVolumeRange">
+                                <button class="btn btn-sm btn-success full-width volume-save mt-2">Save</button>
+                            </div>
+                        </div>
+                        <div class="row bg-light mt-2">
+                            <div class="col">
+                                <h4 class="mt-2 text-muted h5">Bleeter Volume</h4>
+                            </div>
+                        </div>
+                        <div class="row bg-light no-select">
+                            <div class="col mt-2 mb-2">
+                                <input type="range" class="bleeter-volume-range full-width settings-bleeter-volume" min="0" max="10" step="1" id="bleeterVolumeRange">
+                                <button class="btn btn-sm btn-success full-width bleeter-volume-save mt-2">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Texts App -->
+            <div class="device-content d-none app-texts">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">Messages</h4>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg new-text float-right"><i class="fa fa-comment-alt-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="row no-select">
+                            <div class="col mt-2 mb-2 texts-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text View -->
+            <div class="device-content d-none app-texts-view">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row top-row">
+                            <div class="col-sm-2">
+                                <a class="back-button" data-location="texts"><i class="far fa-chevron-left"></i></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <h5 class="text-dark h5 number text-reply-title text-center"></h5>
+                            </div>
+                            <div class="col-sm-2">
+                                <button class="btn btn-md return-call" data-number="" data-name=""><i class="fa fa-phone" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="row text-history">
+                            <div class="col-sm-12 text-history-messages">
+                            </div>
+                        </div>
+                        <div class="row text-toolbar">
+                            <textarea type="text" rows="1" class="text-input text-reply-content clear-input" id="text-input" placeholder="Message"></textarea>
+                            <input type="hidden" class="text-reply-number number">
+                            <button class="btn btn-sm text-submit text-submit-reply"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Compose -->
+            <div class="device-content d-none app-texts-new">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row top-row">
+                            <div class="col-sm-2">
+                                <a class="back-button" data-location="texts"><i class="far fa-chevron-left"></i></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <h5 class="text-dark h5 title text-center">New Message</h5>
+                            </div>
+                            <div class="col-sm-2">
+                            </div>
+                        </div>
+                        <div class="row no-select text-body">
+                            <input class='text-compose-number phonenumber clear-input' name='text-compose-number' type='text' placeholder='Phone Number' maxlength="12">
+                            <textarea type="text" rows="1" class="text-compose clear-input" id="text-compose" placeholder="Message"></textarea>
+                            <button class="btn btn-sm text-submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Phone App -->
+            <div class="device-content d-none app-phone">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">Call History</h4>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg new-call float-right"><i class="fa fa-phone-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="call-history-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Phone Call Receive -->
+            <div class="device-content d-none app-phone-receive">
+                <div class="top-bar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8 text-center mx-auto">
+                                <h4 class="mt-5 mb-3 caller-name text-white h3"></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 text-center mx-auto">
+                                <p class="text-white text-center number caller-number"></p>
+                                <p class="text-center call-status">Incoming Call</p>
+                                <small class="text-center text-white">My Number:</small>
+                                <p class="text-center text-white call-to-number mb-0"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="row no-select call-buttons">
+                            <div class="col">
+                                <button class="accept-call mx-auto btn" data-number="" data-name=""><i class="fa fa-phone"></i></button>
+                            </div>
+                            <div class="col">
+                                <button class="message-caller btn" data-number="" data-name=""><i class="fa fa-comment-alt mx-auto" ></i><p class="text-white text-center">Message Caller</p></button>
+                            </div>
+                            <div class="col">
+                                <button class="reject-call btn mx-auto"><i class="fa fa-phone-slash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Phone Call Make -->
+            <div class="device-content d-none app-phone-make">
+                <div class="top-bar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8 mx-auto text-center">
+                                <h4 class="mt-5 mb-3 text-white text-center h3 name"></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 mx-auto text-center">
+                                <p class="text-white text-center number"></p>
+                                <p class="mb-4 text-center call-status call-time">Calling</p>
+
+                            </div>
+                        </div>
+                        
+                        <div class="row no-select call-buttons">
+                            <div class="col">
+                                <button class="reject-call btn mx-auto"><i class="fa fa-phone-slash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone Call New -->
+            <div class="device-content d-none app-phone-new">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mt-4 mx-auto text-center">
+                                <input type="text" class="call-number no-focus text-dark form-control phonenumber clear-input" max="12">
+                            </div>
+                        </div>
+                        <div class="keypad mt-4">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="1">1</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="2">2 <small>ABC</small></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="3">3 <small>DEF</small></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="4">4 <small>GHI</small></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="5">5 <small>JKL</small></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="6">6 <small>MNO</small></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="7">7 <small>PQRS</small></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="8">8 <small>TUV</small></button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="9">9 <small>WXYZ</small></button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="-">-</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="0">0</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key text-center" data-input="clear">C</button>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col">
+                                    
+                                </div>
+                                <div class="col">
+                                    <button class="btn dial-number-key dial-call-key text-center" data-input="call"><i class="fa fa-phone"></i></button>
+                                </div>
+                                <div class="col">
+                                    
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacts App -->
+            <div class="device-content d-none app-contacts">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row no-select">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">Contacts</h4>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg new-contact float-right"><i class="fa fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control no-focus clear-input  contacts-search" placeholder="Search...">
+                                <small class="contacts-search-count mt-1 mb-3"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts-container">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacts View -->
+            <div class="device-content d-none app-contacts-view">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row top-row">
+                            <div class="col-sm-2">
+                                <a class="back-button" data-location="contacts"><i class="far fa-chevron-left"></i></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <h5 class="text-dark h5 contact-name text-center"></h5>
+                            </div>
+                            <div class="col-sm-2">
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <button class="btn btn-md message-contact action-button" data-number="" data-name="REMOVE ME"><i class="fas fa-comment-alt"></i></button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-md call-contact action-button" data-number="" data-name="REMOVE ME"><i class="fas fa-phone"></i></button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-md email-contact action-button" data-contact="REMOVE ME"><i class="fas fa-envelope"></i></button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-md edit-contact action-button" data-contact="REMOVE ME"><i class="fas fa-pencil"></i></button>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <b>Name:</b>
+                            </div>
+                            <div class="col">
+                                <p class="contact-name"></p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Number:</b>
+                            </div>
+                            <div class="col">
+                                <p class="contact-number"></p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Email:</b>
+                            </div>
+                            <div class="col">
+                                <p class="contact-email"></p>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Notes:</b>
+                            </div>
+                            <div class="col">
+                                <p class="contact-notes">Sends me weird text messages in the early hours of the morning. Probably avoid in person. Works for Royce. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacts Edit -->
+            <div class="device-content d-none app-contacts-edit">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row top-row">
+                            <div class="col-sm-2">
+                                <a class="back-button" data-location="contacts"><i class="far fa-chevron-left"></i></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <h5 class="text-dark h5 contact-name text-center"></h5>
+                            </div>
+                            <div class="col-sm-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-md contact-save">Save</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-md btn-red contact-delete">Delete</button>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <b>Name:</b>
+                            </div>
+                            <div class="col">
+                                <input type="hidden" class="contact-id-input" value="">
+                                <input type="text" class="form-control contact-name-input" value="">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Number:</b>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control clear-input  contact-number-input phonenumber" value="">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Email:</b>
+                            </div>
+                            <div class="col">
+                                <input type="email" class="form-control clear-input  contact-email-input" value="">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Notes:</b>
+                            </div>
+                            <div class="col">
+                                <textarea type="text" class="form-control clear-input contact-notes-input" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contacts New -->
+            <div class="device-content d-none app-contacts-new">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row top-row">
+                            <div class="col-sm-2">
+                                <a class="back-button" data-location="contacts"><i class="far fa-chevron-left"></i></a>
+                            </div>
+                            <div class="col-sm-8">
+                                <h5 class="text-dark h5 contact-name text-center">New Contact</h5>
+                            </div>
+                            <div class="col-sm-2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-md new-contact-save fill-width">Save</button>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-3">
+                                <b>Name:</b>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control new-contact-name-input clear-input" value="">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Number:</b>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control new-contact-number-input phonenumber clear-input" value="">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Email:</b>
+                            </div>
+                            <div class="col">
+                                <input type="email" class="form-control new-contact-email-input clear-input" value="">
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3">
+                                <b>Notes:</b>
+                            </div>
+                            <div class="col">
+                                <textarea type="text" class="form-control new-contact-notes-input clear-input" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculator App -->
+            <div class="device-content d-none app-calculator">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mt-4 mx-auto text-center">
+                                <input type="text" class="calculator-input no-focus text-dark form-control" data-formula="">
+                            </div>
+                        </div>
+                        <div class="keypad mt-4">
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn calculator-number-key function-key text-center" data-input="clear">C</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key function-key text-center" data-input="(">(</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key function-key text-center" data-input=")">)</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key operator-key text-center" data-input="/">/</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="7">7</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="8">8</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="9">9</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key operator-key text-center" data-input="*">*</button>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="4">4</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="5">5</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="6">6</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key operator-key text-center" data-input="-">-</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="1">1</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="2">2</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="3">3</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key operator-key text-center" data-input="+">+</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn calculator-number-key number-key text-center" data-input="0">0</button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="btn calculator-number-key operator-key equals-key text-center" data-input="=">=</button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn calculator-number-key operator-key text-center" data-input=".">.</button>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather App -->
+            <div class="device-content d-none app-weather">
+                <div class="top-bar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 mt-3 mx-auto text-center">
+                                <h3 class="text-white weather-title h3">San Andreas</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-2 mx-auto text-center">
+                                <h3 class="text-white weather-temp h1">82   &deg;F</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-3 mx-auto text-center">
+                                <div class="weather-icon text-white">
+                                    <i class="fas fa-clouds-moon fa-5x weather-icon text-white"></i>
+                                </div>
+                                
+                                <p class="h4 mt-2 text-white weather-weather">Clear</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-5 mx-auto text-center">
+                                <h3 class="text-white weather-title h5">Forecast</h3>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mt-2 mx-auto text-center">
+                                <p class="text-white weather-forecast">Continued cloudy weather today and into tomorrow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bleeter App -->
+            <div class="device-content d-none app-bleeter">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="app-content">
+                    <div class="top-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="bleeter-font text-white h3 text-center">Bleeter</h3>
+                                    <p class="text-white bleeter-name">Guest</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container bleeter-feed">
+                        
+                    </div>
+                    <div class="bleeter-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-5">
+                                    <a class="bleeter-action bleeter-font text-center new-bleet d-none">New Bleet</a>
+                                </div>
+                                <div class="col-2">
+                                    <a class="bleeter-home"><img src="images/bleeter_sheep.png" alt="Bleeter" class="img-responsive mx-auto bleeter-logo"></a>
+                                </div>
+                                <div class="col-5">
+                                    <a class="bleeter-action bleeter-font text-center sign-in d-block">Sign In</a>
+                                    <a class="bleeter-action bleeter-font text-center sign-out d-none">Sign Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bleeter Signin/Register -->
+            <div class="device-content d-none app-bleeter-signin">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="app-content">
+                    <div class="top-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="bleeter-font text-white h3 text-center">Bleeter</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container bleeter-account">
+                        <div class="row">
+                            <div class="col-12 mt-4">
+                                <p class="bleeter-notification text-center" style="display: none"></p>
+                                <ul class="nav nav-tabs justify-content-center bleeter-tabs" id="bleeterTab" role="tablist">
+                                  <li class="nav-item">
+                                    <a class="nav-link active bleeter-font h3" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link bleeter-font h3" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="bleeterTabContent">
+                                  <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                      <div class="container bleeter-signin-form">
+                                          <div class="row mt-3">
+                                              <div class="col-12">
+                                                  <div class="form-group">
+                                                      <label for="bleeter-signin-username" class="text-white text-center">Username</label>
+                                                      <input type="text" class="form-control bleeter-signin-username clear-input" name="bleeter-signin-username">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row mt-3">
+                                              <div class="col-12">
+                                                  <div class="form-group">
+                                                      <label for="bleeter-signin-username" class="text-white text-center">Password</label>
+                                                      <input type="password" class="form-control bleeter-signin-password clear-input" name="bleeter-signin-username">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row mt-3">
+                                              <div class="col-12">
+                                                  <button class="btn btn-lg full-width bleeter-button bleeter-form-submit">Sign In</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                      <div class="container bleeter-register-form">
+                                          <div class="row mt-3">
+                                              <div class="col-12">
+                                                  <div class="form-group">
+                                                      <label for="bleeter-signin-username" class="text-white text-center">Username</label>
+                                                      <input type="text" class="form-control bleeter-register-username clear-input" name="bleeter-signin-username" maxlength="30">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row mt-3">
+                                              <div class="col-12">
+                                                  <div class="form-group">
+                                                      <label for="bleeter-signin-username" class="text-white text-center">Password</label>
+                                                      <input type="password" class="form-control bleeter-register-password clear-input" name="bleeter-signin-username">
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row mt-3">
+                                              <div class="col-12">
+                                                  <button class="btn btn-lg full-width bleeter-button bleeter-form-submit">Register</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bleeter-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-5">
+                                    <a class="bleeter-action bleeter-font text-center bleeter-home d-block">Home</a>
+                                </div>
+                                <div class="col-2">
+                                    <a class="bleeter-home"><img src="images/bleeter_sheep.png" alt="Bleeter" class="img-responsive mx-auto bleeter-logo"></a>
+                                </div>
+                                <div class="col-5">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bleeter New Bleet -->
+            <div class="device-content d-none app-bleeter-bleet">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="app-content">
+                    <div class="top-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="bleeter-font text-white h3 text-center">Bleeter</h3>
+                                    <p class="text-white bleeter-name">Guest</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container bleeter-bleet">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="container bleeter-bleet-form">
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <h3 class="text-white bleeter-font text-center">New Bleet</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                      <div class="col-12">
+                                          <div class="form-group">
+                                              <textarea type="text" class="form-control bleeter-new-bleet clear-input" name="bleeter-new-bleet" rows="10" maxlength="250"></textarea>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-sm bleeter-emoji-button">Emoji</button>
+                                            <div class="bleeter-emoji-popup">
+                                                <button class="btn btn-sm bleeter-emoji-close full-width"><i class="fal fa-times"></i></button>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleet:</div>
+                                                    <div class="col-6"><img src="images/bleet.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleetangry:</div>
+                                                    <div class="col-6"><img src="images/bleetangry.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleeteyeroll:</div>
+                                                    <div class="col-6"><img src="images/bleeteyeroll.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleetsad:</div>
+                                                    <div class="col-6"><img src="images/bleetsad.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleetsleep:</div>
+                                                    <div class="col-6"><img src="images/bleetsleep.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleetheart:</div>
+                                                    <div class="col-6"><img src="images/bleetheart.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                                <div class="row mt-1">
+                                                    <div class="col-6">:bleetblush:</div>
+                                                    <div class="col-6"><img src="images/bleetblush.png" class="bleeter-emoji"/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                      <div class="col-12">
+                                          <button class="btn btn-lg full-width bleeter-button bleeter-form-submit">Bleet</button>
+                                      </div>
+                                    </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bleeter-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-5">
+                                    <a class="bleeter-action bleeter-font text-center bleeter-home d-block">Home</a>
+                                </div>
+                                <div class="col-2">
+                                    <a class="bleeter-home"><img src="images/bleeter_sheep.png" alt="Bleeter" class="img-responsive mx-auto bleeter-logo"></a>
+                                </div>
+                                <div class="col-5">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes App -->
+            <div class="device-content d-none app-notes">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">Notes</h4>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg new-note float-right"><i class="far fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="row no-select">
+                            <div class="col notes-container">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes New -->
+            <div class="device-content d-none app-notes-new">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">New Note</h4>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg new-note float-right"><i class="far fa-check"></i></button>
+                            </div>
+                        </div>
+                        <div class="row no-select">
+                            <div class="col new-note-container">
+                                <div class="note">
+                                    <textarea name="new-note-content" class="new-note-content clear-input" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Notes Edit -->
+            <div class="device-content d-none app-notes-edit">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-dark h4">Edit Note</h4>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-lg save-note float-right"><i class="far fa-check"></i></button>
+                            </div>
+                        </div>
+                        <div class="row no-select">
+                            <div class="col edit-note-container">
+                                <div class="note">
+                                    <textarea name="edit-note-content" class="edit-note-content clear-input" rows="10"></textarea>
+                                    <input type="hidden" class="edit-note-id">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Clock App -->
+            <div class="device-content d-none app-clock">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="tab-content mt-3" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="clock-home" role="tabpanel" aria-labelledby="clock-home-tab">
+                                <h3 class="mb-3">World Clock</h3>
+                                <div class="city ls">
+                                    <h3>Los Santos</h3>
+                                    <p class="time mb-0"></p>
+                                </div>
+                                <div class="city lc">
+                                    <h3>Liberty City</h3>
+                                    <p class="time-lc mb-0">16:37</p>
+                                </div>
+                                <div class="city lv">
+                                    <h3>Las Venturas</h3>
+                                    <p class="time mb-0">16:37</p>
+                                </div>
+                                <div class="city vc">
+                                    <h3>Vice City</h3>
+                                    <p class="time-lc mb-0">16:37</p>
+                                </div>
+                                <div class="city sf">
+                                    <h3>San Fierro</h3>
+                                    <p class="time mb-0">16:37</p>
+                                </div>
+                                <div class="city pb">
+                                    <h3>Paleto</h3>
+                                    <p class="mb-0">1200 BC</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="clock-stopwatch" role="tabpanel" aria-labelledby="clock-stopwatch-tab">
+                                <div class="stopwatch-time">00:00:00</div>
+                                <div class="stopwatch-buttons">
+                                    <button class="btn btn-md btn-start">Start</button>
+                                    <button class="btn btn-md btn-stop">Stop</button>
+                                    <button class="btn btn-md btn-reset">Reset</button>
+                                    <button class="btn btn-md btn-lap">Lap</button>
+                                </div>
+                                <h4 class="h5 laps-title">Laps</h4>
+                                <div class="stopwatch-laps text-center mt-3">
+                                    
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="clock-timer" role="tabpanel" aria-labelledby="clock-timer-tab">
+                                <div class="timer-time">00:00</div>
+                                <div class="input-group">
+                                    <label for="mins">Minutes</label>
+                                    <input name="mins" type="number" class="timer-minutes form-control" min="0" max="60" value="0">
+                                </div>
+                                <div class="input-group">
+                                    <label for="seconds">Seconds</label>
+                                    <input name="seconds" type="number" class="timer-seconds form-control" min="0" max="60" value="1">
+                                </div>
+                                <div class="timer-buttons">
+                                    <button class="btn btn-lg btn-timer-start">Start</button>
+                                    <button class="btn btn-lg btn-timer-stop">Stop</button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="nav nav-pills clock-tabs" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="clock-home-tab" data-toggle="pill" href="#clock-home" role="tab" aria-controls="clock-home" aria-selected="true"><i class="fal fa-clock"></i><small>Clock</small></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="clock-stopwatch-tab" data-toggle="pill" href="#clock-stopwatch" role="tab" aria-controls="clock-stopwatch" aria-selected="false"><i class="fal fa-stopwatch"></i><small>Stopwatch</small></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="clock-timer-tab" data-toggle="pill" href="#clock-timer" role="tab" aria-controls="clock-timer" aria-selected="false"><i class="fal fa-hourglass"></i><small>Timer</small></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valet App -->
+            <div class="device-content d-none app-valet">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4 class="mt-3 mb-3 text-white h4">MyValet</h4>
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+
+                        <input type="text" class="form-control clear-input no-focus valet-search" placeholder="Search...">
+                        <small class="valet-search-count mt-1 mb-3"></small>
+                        <div class="row">
+                            <div class="d-block full-width">
+                                <div class="vehicles-container">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emails App -->
+            <div class="device-content d-none app-emails">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t emails-top-section">
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <img src="images/eyefind-logo.png" alt="" class="emails-logo">
+                        <button class="btn btn-md emails-new"><i class="fal fa-envelope"></i></button>
+                      </nav>
+                      <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="p-4">
+                            <nav class="nav flex-column emails-menu">
+                                <p class="menu-title"></p>
+                                <a class="nav-link email-sign-in" href="#">Sign In</a>
+                                <a class="nav-link email-sign-out" href="#">Sign Out</a>
+                                <a class="nav-link email-register" href="#">Register</a>
+                            </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-section">
+                        <ul class="nav nav-tabs justify-content-center email-tabs" id="emailTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active h3" id="inbox-tab" data-toggle="tab" href="#inbox" role="tab" aria-controls="inbox" aria-selected="true">Inbox</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link h3" id="sent-tab" data-toggle="tab" href="#sent" role="tab" aria-controls="sent" aria-selected="false">Sent</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="emailTabContent">
+                            <div class="tab-pane fade show active" id="inbox" role="tabpanel" aria-labelledby="inbox-tab">
+                                <input type="text" class="form-control no-focus clear-input  emails-inbox-search" placeholder="Search...">
+                                <div class="email-inbound-container">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="sent" role="tabpanel" aria-labelledby="sent-tab">
+                                <input type="text" class="form-control no-focus clear-input  emails-outbox-search" placeholder="Search...">
+                                <div class="email-outbound-container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emails Compose -->
+            <div class="device-content d-none app-emails-compose">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t emails-top-section">
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <img src="images/eyefind-logo.png" alt="" class="emails-logo">
+                        <button class="btn btn-md emails-compose-send"><i class="fal fa-paper-plane"></i></button>
+                      </nav>
+                      <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="p-4">
+                            <nav class="nav flex-column emails-menu">
+                                <p class="menu-title"></p>
+                                <a class="nav-link emails-home" href="#">Home</a>
+                                <a class="nav-link email-sign-in" href="#">Sign In</a>
+                                <a class="nav-link email-sign-out d-none" href="#">Sign Out</a>
+                                <a class="nav-link email-register" href="#">Register</a>
+                            </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="container pt-3">
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">From</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <label for="emailComposeTo" class="col-sm-2 col-form-label">To</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control-plaintext email-compose-to clear-input" id="emailComposeTo">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control-plaintext email-compose-content clear-input" name="emailComposeContent" id="emailComposeContent" rows="15" placeholder="Compose email"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emails View -->
+            <div class="device-content d-none app-emails-view">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t emails-top-section">
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <img src="images/eyefind-logo.png" alt="" class="emails-logo">
+                        <button class="btn btn-md emails-reply" data-arrayid=""><i class="fal fa-reply"></i></button>
+                      </nav>
+                      <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="p-4">
+                            <nav class="nav flex-column emails-menu">
+                                <p class="menu-title"></p>
+                                <a class="nav-link emails-home" href="#">Home</a>
+                                <a class="nav-link email-sign-in" href="#">Sign In</a>
+                                <a class="nav-link email-sign-out" href="#">Sign Out</a>
+                                <a class="nav-link email-register" href="#">Register</a>
+                            </nav>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-section">
+                        <div class="container pt-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="email-view-address"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="email-view-date"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="email-view-content"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Emails Signin/Signup -->
+            <div class="device-content d-none app-emails-signin">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <img src="images/eyefind-logo.png" alt="" class="emails-logo">
+                    <div class="bottom-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="emails-notification text-center" style="display: none">Error MESSAGE</p>
+                                    <ul class="nav nav-tabs justify-content-center emails-tabs" id="emailsTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active bleeter-font h3" id="signin-tab" data-toggle="tab" href="#emailSignin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link bleeter-font h3" id="register-tab" data-toggle="tab" href="#emailRegister" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="emailsTabContent">
+                                      <div class="tab-pane fade show active" id="emailSignin" role="tabpanel" aria-labelledby="signin-tab">
+                                          <div class="container emails-signin-form">
+                                              <div class="row mt-3">
+                                                  <div class="col-12">
+                                                      <div class="form-group">
+                                                          <label for="emails-signin-username" class="text-white text-center">Username</label>
+                                                          <input type="text" class="form-control emails-signin-username clear-input" name="emails-signin-username" placeholder="Username">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row mt-3">
+                                                  <div class="col-12">
+                                                      <div class="form-group">
+                                                          <label for="emails-signin-username" class="text-white text-center">Password</label>
+                                                          <input type="password" class="form-control emails-signin-password clear-input" name="emails-signin-username" placeholder="Password">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row mt-3">
+                                                  <div class="col-12">
+                                                      <button class="btn btn-md full-width emails-signin-submit">Sign In</button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="tab-pane fade" id="emailRegister" role="tabpanel" aria-labelledby="register-tab">
+                                          <div class="container emails-register-form">
+                                              <div class="row mt-3">
+                                                    <div class="col-12">
+                                                        <label for="emails-signin-username" class="text-white text-center">Username</label>
+                                                        <div class="input-group mb-3">
+                                                            
+                                                            <input type="text" class="form-control emails-register-username clear-input" placeholder="Username" aria-label="Username" aria-describedby="emails-register-describe" name="emails-register-username" maxlength="30">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text" id="emails-register-describe">@eyefind.info</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                              </div>
+                                              <div class="row mt-3">
+                                                  <div class="col-12">
+                                                        <div class="form-group">
+                                                          <label for="emails-signin-password" class="text-white text-center">Password</label>
+                                                          <input type="password" class="form-control emails-register-password clear-input" name="emails-signin-password" placeholder="Password">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="row mt-3">
+                                                  <div class="col-12">
+                                                      <button class="btn btn-md full-width emails-register-submit">Register</button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleeca App -->
+            <div class="device-content d-none app-fleeca">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="top-section">
+                        <img src="images/fleeca-logo.png" class="fleeca-logo">
+                    </div>
+                    <div class="middle-content">
+                        <div class="accounts-container">
+                        </div>
+                    </div>
+                    <div class="bottom-footer no-select">
+                        <div class="footer-button fleeca-home-button">
+                            <i class="fas fa-home-lg-alt"></i>
+                            <small>Accounts</small>
+                        </div>
+                        <div class="footer-button fleeca-newaccount-button">
+                            <i class="fal fa-plus-square"></i>
+                            <small>New Account</small>
+                        </div>
+                        <div class="footer-button fleeca-transfer-button">
+                            <i class="fal fa-exchange"></i>
+                            <small>Transfer</small>
+                        </div>
+                        <div class="footer-button readonly">
+                            <i class="fal fa-receipt"></i>
+                            <small>Transactions</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleeca New Account -->
+            <div class="device-content d-none app-fleeca-newaccount">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="top-section">
+                        <img src="images/fleeca-logo.png" class="fleeca-logo">
+                    </div>
+                    <div class="middle-content">
+                        <img src="images/fleeca-banner.png" alt="" style="width: 100%;">
+                        <div class="container">
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <h4 class="text-center h5 fleeca-newaccount-title">Open a new account</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fleeca-newaccount-form">
+                            <div class="container">
+                                <div class="form-group row">
+                                    <label for="newBankAccount" class="col-12 col-form-label text-center font-weight-bold">Account Name</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control fleeca-newaccount-name clear-input" id="newBankAccount">
+                                    </div>
+
+                                    <label for="newBankAccountPIN" class="col-12 col-form-label text-center font-weight-bold">Account PIN</label>
+                                    <div class="col-sm-12">
+                                        <input type="number" maxlength="4" class="form-control fleeca-newaccount-pin clear-input" id="newBankAccountPIN">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-md fleeca-newaccount-submit full-width">Create Account</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-footer no-select">
+                        <div class="footer-button fleeca-home-button">
+                            <i class="fal fa-home-lg-alt"></i>
+                            <small>Accounts</small>
+                        </div>
+                        <div class="footer-button fleeca-newaccount-button">
+                            <i class="fas fa-plus-square"></i>
+                            <small>New Account</small>
+                        </div>
+                        <div class="footer-button fleeca-transfer-button">
+                            <i class="fal fa-exchange"></i>
+                            <small>Transfer</small>
+                        </div>
+                        <div class="footer-button readonly">
+                            <i class="fal fa-receipt"></i>
+                            <small>Transactions</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleeca Transfer -->
+            <div class="device-content d-none app-fleeca-transfer">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="top-section">
+                        <img src="images/fleeca-logo.png" class="fleeca-logo">
+                    </div>
+                    <div class="middle-content">
+                        <h4 class="text-center mt-4">Account Transfer</h4>
+                        <p class="text-center transfer-notification" style="display: none;"></p>
+                        <div class="fleeca-transfer-form">
+                            <div class="container">
+                                <div class="form-group row">
+                                    <div class="col-12 col-form-label text-center font-weight-bold">
+                                        <label for="fromBankAccount" class="col-12 col-form-label text-center font-weight-bold">Transfer From</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="custom-select custom-select-sm fleeca-transfer-from">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="newBankAccount" class="col-12 col-form-label text-center font-weight-bold">Transfer To</label>
+                                    <div class="col-sm-12">
+                                        <input type="number" class="form-control form-control-sm fleeca-transfer-to clear-input" id="newBankAccount" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="newBankAccount" class="col-12 col-form-label text-center font-weight-bold">Amount</label>
+                                    <div class="col-sm-12">
+                                        <input type="number" class="form-control form-control-sm fleeca-transfer-amount clear-input" id="newBankAccount">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-md fleeca-transfer-submit full-width">Transfer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-footer no-select">
+                        <div class="footer-button fleeca-home-button">
+                            <i class="fal fa-home-lg-alt"></i>
+                            <small>Accounts</small>
+                        </div>
+                        <div class="footer-button fleeca-newaccount-button">
+                            <i class="fal fa-plus-square"></i>
+                            <small>New Account</small>
+                        </div>
+                        <div class="footer-button fleeca-transfer-button">
+                            <i class="fas fa-exchange"></i>
+                            <small>Transfer</small>
+                        </div>
+                        <div class="footer-button readonly">
+                            <i class="fal fa-receipt"></i>
+                            <small>Transactions</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yellow Pages App -->
+            <div class="device-content d-none app-yellowpages">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t yellowpages-top-section">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="p-4">
+                                <nav class="nav flex-column yellowpages-menu">
+                                    <p class="menu-title"></p>
+                                    <a class="nav-link yellowpages-sign-in d-block" href="#">Sign In / Register</a>
+                                    <a class="nav-link yellowpages-sign-out d-none" href="#">Sign Out</a>
+                                </nav>
+                            </div>
+                        </div>
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <div class="yellowpages-logo">
+                            <i class="fad fa-ad"></i>
+                        </div>
+                        
+                        <button class="btn btn-md yellowpages-new d-none"><i class="fal fa-plus"></i></button>
+                      </nav>
+                      
+                    </div>
+                    <div class="bottom-section">
+                        <div class="categories-container no-select">
+                            <div class="category" data-category="all"><i class="fas fa-infinity"></i>All<i class="fad fa-chevron-circle-right"></i></div>
+                            <div class="category" data-category="Vehicles"><i class="fas fa-car-side"></i>Vehicles<i class="fad fa-chevron-circle-right"></i></div>
+                            <div class="category" data-category="Property"><i class="fas fa-home-lg"></i>Property<i class="fad fa-chevron-circle-right"></i></div>
+                            <div class="category" data-category="Jobs"><i class="fas fa-briefcase"></i>Jobs<i class="fad fa-chevron-circle-right"></i></div>
+                            <div class="category" data-category="Services"><i class="fas fa-hands-helping"></i>Services<i class="fad fa-chevron-circle-right"></i></div>
+                            <div class="category" data-category="Community"><i class="fas fa-people-arrows"></i>Community<i class="fad fa-chevron-circle-right"></i></div>
+                            <div class="category" data-category="Other"><i class="fas fa-ellipsis-h"></i>Other<i class="fad fa-chevron-circle-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yellow Pages View Adverts -->
+            <div class="device-content d-none app-yellowpages-view">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t yellowpages-top-section">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="p-4">
+                                <nav class="nav flex-column yellowpages-menu">
+                                    <p class="menu-title"></p>
+                                    <a class="nav-link yellowpages-home " href="#">Home</a>
+                                    <a class="nav-link yellowpages-sign-in d-block" href="#">Sign In / Register</a>
+                                    <a class="nav-link yellowpages-sign-out d-none" href="#">Sign Out</a>
+                                </nav>
+                            </div>
+                        </div>
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <div class="yellowpages-logo">
+                            <i class="fad fa-ad"></i>
+                        </div>
+                        
+                        <button class="btn btn-md yellowpages-new d-none"><i class="fal fa-plus"></i></button>
+                      </nav>
+                      
+                    </div>
+                    <div class="bottom-section">
+                        <input type="text" class="form-control clear-input no-focus adverts-search" placeholder="Search...">
+                        <div class="adverts-container no-select">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yellow Pages Signin -->
+            <div class="device-content d-none app-yellowpages-signin">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t yellowpages-top-section">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="p-4">
+                                <nav class="nav flex-column yellowpages-menu">
+                                    <p class="menu-title"></p>
+                                    <a class="nav-link yellowpages-home " href="#">Home</a>
+                                    <a class="nav-link yellowpages-sign-in d-block" href="#">Sign In / Register</a>
+                                    <a class="nav-link yellowpages-sign-out d-none" href="#">Sign Out</a>
+                                </nav>
+                            </div>
+                        </div>
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <div class="yellowpages-logo">
+                            <i class="fad fa-ad"></i>
+                        </div>
+                        
+                        <button class="btn btn-md yellowpages-new d-none"><i class="fal fa-plus"></i></button>
+                      </nav>
+                      
+                    </div>
+                    <div class="bottom-section">
+                        <p class="yellowpages-notification text-center" style="display: none">Error MESSAGE</p>
+                        <ul class="nav nav-tabs justify-content-center yellowpages-tabs mt-3" id="yellowpagesTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active bleeter-font h3" id="signin-tab" data-toggle="tab" href="#yellowpagesSignin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bleeter-font h3" id="register-tab" data-toggle="tab" href="#yellowpagesRegister" role="tab" aria-controls="register" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="yellowpagesTabContent">
+                          <div class="tab-pane fade show active" id="yellowpagesSignin" role="tabpanel" aria-labelledby="signin-tab">
+                              <div class="container yellowpages-signin-form mt-3">
+                                  <div class="row mt-3">
+                                      <div class="col-12">
+                                          <div class="form-group">
+                                              <label for="yellowpages-signin-username" class="text-center">Username</label>
+                                              <input type="text" class="form-control yellowpages-signin-username clear-input" name="yellowpages-signin-username" placeholder="Username">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                      <div class="col-12">
+                                          <div class="form-group">
+                                              <label for="yellowpages-signin-username" class="text-center">Password</label>
+                                              <input type="password" class="form-control yellowpages-signin-password clear-input" name="yellowpages-signin-username" placeholder="Password">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                      <div class="col-12">
+                                          <button class="btn btn-md full-width yellowpages-signin-submit">Sign In</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="tab-pane fade" id="yellowpagesRegister" role="tabpanel" aria-labelledby="register-tab">
+                              <div class="container yellowpages-register-form mt-3">
+                                  <div class="row mt-3">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                              <label for="yellowpages-register-username" class="text-center">Username</label>
+                                              <input type="text" class="form-control yellowpages-register-username clear-input" name="yellowpages-register-username" placeholder="Username" maxlength="30">
+                                          </div>
+                                        </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                      <div class="col-12">
+                                            <div class="form-group">
+                                              <label for="yellowpages-signin-password" class="text-center">Password</label>
+                                              <input type="password" class="form-control yellowpages-register-password clear-input" name="yellowpages-signin-password" placeholder="Password">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row mt-3">
+                                      <div class="col-12">
+                                          <button class="btn btn-md full-width yellowpages-register-submit">Register</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yellow Pages New Advert -->
+            <div class="device-content d-none app-yellowpages-new">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="pos-f-t yellowpages-top-section">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="p-4">
+                                <nav class="nav flex-column yellowpages-menu">
+                                    <p class="menu-title"></p>
+                                    <a class="nav-link yellowpages-home " href="#">Home</a>
+                                    <a class="nav-link yellowpages-sign-in d-block" href="#">Sign In / Register</a>
+                                    <a class="nav-link yellowpages-sign-out d-none" href="#">Sign Out</a>
+                                </nav>
+                            </div>
+                        </div>
+                      <nav class="navbar">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class=""><i class="fal fa-bars"></i></span>
+                        </button>
+                        <div class="yellowpages-logo">
+                            <i class="fad fa-ad"></i>
+                        </div>
+                        
+                      </nav>
+                      
+                    </div>
+                    <div class="bottom-section">
+                        <div class="yellowpages-popup">You can only post one (1) advertisement every 15 minutes!</div>
+                        <div class="yellowpages-new-form">
+                            <div class="form-group">
+                                <label for="yellowpages-new-advertype">Advert Type</label>
+                                <select class="custom-select custom-select-sm yellowpages-new-advertype" id="yellowpages-new-advertype">
+                                    <option value="Vehicles">Vehicles</option>
+                                    <option value="Property">Property</option>
+                                    <option value="Jobs">Jobs</option>
+                                    <option value="Services">Services</option>
+                                    <option value="Community">Community</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="yellowpages-new-phone">Phone Number</label>
+                                <input type="text" class="form-control form-control-sm yellowpages-new-phone phonenumber clear-input" id="yellowpages-new-phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="yellowpages-new-email">Email Address</label>
+                                <input type="text" class="form-control form-control-sm yellowpages-new-email clear-input" id="yellowpages-new-email">
+                            </div>
+                            <div class="form-group">
+                                <label for="yellowpages-new-email">Content</label>
+                                <textarea type="text" class="form-control form-control-sm yellowpages-new-content clear-input" rows="10"></textarea>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-lg yellowpages-new-submit full-width">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- State App -->
+            <div class="device-content d-none app-state">
+                <div class="top-bar solid">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="app-content">
+                    <div class="top-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="text-white h4 text-center">San Andreas State App</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="state-container">
+                        <img src="images/state-banner.png" alt="" class="img-fluid">
+                        <div class="accordion mt-0" id="stateAccordion">
+                          <div class="card">
+                            <div class="card-header" id="headingOne">
+                              <h2 class="mb-0">
+                                <button class="btn btn-md full-width text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">State Debt<i class="fas fa-caret-left"></i></button>
+                              </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#stateAccordion">
+                              <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="debt-title">Amount Owed</p>
+                                        <p class="debt-owed">$1,230,000</p>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-12 text-left">
+                                        <label for="" class="text-left">Bank Account</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="custom-select custom-select-sm state-debt-bankaccount">
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="newBankAccount" class="col-12 text-left">Amount To Pay</label>
+                                    <div class="col-sm-12">
+                                        <input type="number" class="form-control form-control-sm state-debt-amount clear-input" id="stateDebtAmount">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="state-debt-notification"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><button class="btn btn-sm full-width state-debt-submit">Pay Now</button></div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header" id="headingTwo">
+                              <h2 class="mb-0">
+                                <button class="btn btn-md full-width collapsed readonly text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" readonly disabled="true">Taxes<i class="fas fa-caret-left"></i></button>
+                              </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#stateAccordion">
+                              <div class="card-body">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-header" id="headingThree">
+                              <h2 class="mb-0">
+                                <button class="btn btn-md full-width collapsed readonly text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" readonly disabled="true">Licensing<i class="fas fa-caret-left"></i></button>
+                              </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#stateAccordion">
+                              <div class="card-body">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maps App -->
+            <!-- <div class="device-content d-none app-map">
+                <div class="top-bar">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <i class="far fa-signal-4 signal"></i>
+                                <p class="carrier">GBMobile</p>
+                            </div>
+                            <div class="col"><p class="time">14:25</p></div>
+                            <div class="col">
+                                <i class="far fa-battery-three-quarters battery"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <div class="mapContainer" id="mapContainer"></div>
+                    
+                </div>
+            </div> -->
+
+            <button class="btn home-button"></button>
+        </div>
+        <div class="device-stripe"></div>
+        <div class="device-header"></div>
+        <div class="device-sensors"></div>
+        <div class="device-btns"></div>
+        <div class="device-power"></div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2b2a8af196.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="stopwatch.js"></script>
+    <script src="moment.js"></script>
+    <script src="math.js"></script>
+    <script src="jquery.mask.min.js"></script>
+    <script src="leaflet.js"></script>
+</body>
+
+</html>

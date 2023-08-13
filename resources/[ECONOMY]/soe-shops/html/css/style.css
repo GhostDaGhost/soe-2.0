@@ -1,0 +1,249 @@
+* {
+    border-radius: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+body {
+    background-color: rgba(0,0,0,0);
+}
+
+body.active {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.ui-container {
+    height: 100vh;
+}
+
+.atm-menu-container {
+    overflow: hide;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    background-color: #3C465C;
+    display: none;
+}
+
+.atm-button-container {
+    position: relative;
+    margin-top: -yy;
+}
+
+.atm-button {
+    border-radius: 7.5px;
+    margin-top: 12.5px;
+    padding: 20px;
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    transition: ease .1s;
+}
+
+.atm-button:hover {
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+}
+
+.atm-button > .left {
+    text-align: left;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.atm-button > .right {
+    text-align: right;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.atm-button > .number {
+    text-align: right;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.amount-select {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 15px;
+}
+
+.atm-title {
+    padding: 10%;
+    font-size: 50px;
+    color: white;
+    line-height: 1;
+}
+
+.atm-title-sm {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    padding: 100px 0 0 0;
+    width: 100%;
+    color: white;
+}
+
+.atm-subtitle {
+    font-size: 35px;
+    line-height: 1;
+    font-weight: 600;
+    text-align: center;
+    padding: 25px 0 0 0;
+    width: 100%;
+    color: gray;
+}
+
+.atm-invisible-input {
+    background-color: rgba(0,0,0,0);
+    margin: auto;
+    margin-top: 75px;
+    padding: 25px 50px;
+    width: 100%;
+    height: 150px;
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+    border-style: none;
+    color: white;
+    transition: ease .1s;
+}
+
+.atm-invisible-display {
+    background-color: rgba(0,0,0,0);
+    margin: auto;
+    margin-top: 75px;
+    padding: 25px 50px;
+    width: 100%;
+    height: 150px;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    border-style: none;
+    color: white;
+    transition: ease .1s;
+}
+
+.atm-invisible-input:hover {
+    background-color: #1e232e;
+    cursor: pointer;
+}
+
+.atm-invisible-input:hover::placeholder {
+    color: #3C465C;
+}
+
+.atm-invisible-input::placeholder {
+    color: #1e232e;
+}
+
+.text-left {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.message-title {
+    padding-top: 25px;
+    padding-bottom: 175px;
+    color: black;
+}
+
+.message-icon > i {
+    padding-top: 125px;
+    font-size: 175px;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+}
+
+.atm-header {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding: 25px;
+    line-height: 50px;
+}
+
+
+
+/* ID Specific Styles */
+
+#withdraw-amount-display {
+    margin-top: 125px;
+}
+
+#atm-header-logo {
+    height: 50px;
+    float: right;
+}
+
+#atm-header-date {
+    float: left;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+img#atm-insert-card {
+    width: 300px;
+    float: right;
+    margin-right: 100px;
+    margin-top: -170px;
+}
+
+#atm-card-insert-title {
+    margin-top: 60px;
+    width: 450px;
+    line-height: 50px;
+    float: left;
+}
+
+#insert-card > .container {
+    margin-bottom: 35px;
+}
+
+/* Button ID Specific Style Overrides */
+
+#SubmitTransaction {
+    color: green;
+}
+
+#SubmitTransaction:hover {
+    color: white;
+    background-color: green;
+}
+
+#Cancel {
+    color: red;
+}
+
+#Cancel:hover {
+    color: white;
+    background-color: red;
+}

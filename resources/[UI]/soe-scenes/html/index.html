@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SoE Scenes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- LOAD UP GAME JQUERY -->
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <!-- SCENES UI -->
+        <div id="scenes_container">
+            <p class="scenes_text" style="font-size: 3.1vh; right: 39.1%;">Scenes</p>
+
+            <p class="scenes_text" style="margin-left: 3.6%; top: 23.5%;">Text:</p>
+            <div class="scenes_inputbox" style="margin-left: 3.6%; top: 31.3%;">
+                <input class='scenes_inputfield' id="scenes_textinput" maxlength="55">
+            </div>
+    
+            <p class="scenes_text" style="margin-left: 3.6%; top: 39.7%;">Distance (1 - 10):</p>
+            <div class="scenes_inputbox" style="margin-left: 3.6%; top: 47.3%;">
+                <input class='scenes_inputfield' id="scenes_distanceinput" maxlength="55">
+            </div>
+    
+            <p class="scenes_text" style="margin-left: 3.6%; top: 58.5%;">Color:</p>
+            <select class="scenes_dropdown" id="scenes_colorchoice" style="margin-left: 3.3%; top: 67.8%; position: absolute;">
+                <option value="White" class="dropdown_option">White</option>
+                <option value="Red" class="dropdown_option">Red</option>
+                <option value="Yellow" class="dropdown_option">Yellow</option>
+                <option value="Blue" class="dropdown_option">Blue</option>
+                <option value="Green" class="dropdown_option">Green</option>
+                <option value="Purple" class="dropdown_option">Purple</option>
+                <option value="Dark Gray" class="dropdown_option">Dark Gray</option>
+                <option value="Orange" class="dropdown_option">Orange</option>
+            </select>
+
+            <button id="scenes_createbutton">Create</div>
+        </div>
+    </body>
+
+    <!-- JAVASCRIPTS -->
+    <script src="js/main.js" type="text/javascript"></script>
+</html>

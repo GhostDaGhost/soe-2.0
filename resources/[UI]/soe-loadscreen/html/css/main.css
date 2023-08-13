@@ -1,0 +1,107 @@
+body {
+    margin: 0vh;
+    padding: 0vh;
+
+    background-size: 20%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    transition: background 1.5s linear;
+
+    position: fixed;
+    background-size: cover;
+    background-color: black;
+    background-image: url(https://soe.gg/loadscreen/);
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    position: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(img/EPCG.png);
+}
+
+.loading-container {
+    left: 5%;
+    right: 5%;
+    bottom: 10%;
+
+    z-index: 5;
+    position: absolute;
+}
+
+.loading-bar-container {
+    width: 110%;
+    height: 1.25vh;
+
+    bottom: -10vh;
+    left: -4.85vw;
+    padding: 0.6vh;
+    border-radius: 1vh;
+    background-color: #0000005d;
+
+    display: block;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+
+.loading-bar {
+    width: 0%;
+    height: 1.25vh;
+    border-radius: 0.5vh;
+
+    display: none;
+    transition: width 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.bgcolor-first {
+    background-color: #660000c4;
+}
+
+.bgcolor-second {
+    background-color: #660000c4;
+}
+
+.bgcolor-third {
+    background-color: #660000c4;
+}
+
+.bgcolor-fourth {
+    background-color: #660000c4;
+}
+
+.color-first {
+    color: #660000c4;
+}
+
+.color-second {
+    color: #660000c4;
+}
+
+.color-third {
+    color: #660000c4;
+}
+
+.color-fourth {
+    color: #660000c4;
+}

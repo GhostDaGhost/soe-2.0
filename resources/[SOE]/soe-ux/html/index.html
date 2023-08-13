@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SoE UX</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- LOAD UP GAME JQUERY -->
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+        <!-- CSS STYLESHEETS -->
+        <link href="css/boombox.css" rel="stylesheet" type="text/css"/>
+        <link href="css/neons.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <!-- BOOMBOX -->
+        <div id="boombox_container" style="display: none;">
+            <p id="boombox_maintitle">MajorTek Boombox</p>
+            <p id="boombox_url_title" style="font-size: 0.99vh; top: 28.3%; right: 13.5%;">
+                Youtube URL (Example: https://www.youtube.com/watch?v=VJ9VKkT6Xrc | You need: VJ9VKkT6Xrc):
+            </p>
+
+            <div id="boombox_url_inputbox" style="top: 37.1%; right: 8.4%;">
+                <input id="boombox_url_input" maxlength="150" required>
+            </div>
+            <button id="boombox_playbutton" onclick="PlayButtonClicked();">PLAY</button>
+            <button id="boombox_pausebutton" onclick="PauseButtonClicked();">PAUSE</button>
+        </div>
+
+        <!-- TOTAL BOOMBOX PLAYERS -->
+        <div style="visibility: hidden;" id="player1"></div>
+        <div style="visibility: hidden;" id="player2"></div>
+        <div style="visibility: hidden;" id="player3"></div>
+        <div style="visibility: hidden;" id="player4"></div>
+        <div style="visibility: hidden;" id="player5"></div>
+        <div style="visibility: hidden;" id="player6"></div>
+        <div style="visibility: hidden;" id="player7"></div>
+        <div style="visibility: hidden;" id="player8"></div>
+        <div style="visibility: hidden;" id="player9"></div>
+        <div style="visibility: hidden;" id="player10"></div>
+
+        <!-- NEON UNDERGLOW CONTROLLER -->
+        <div id="neoncontroller_container" style="display: none;">
+            <p id="neoncontroller_maintitle">MajorTek Neon Controller</p>
+
+            <p id="neoncontroller_label" style="font-size: 0.99vh; top: 20.1%; left: 8%;">Red</p>
+            <div id="neoncontroller_red_inputbox" style="top: 25.3%; left: 8%;">
+                <input id="neoncontroller_red_input" type="number" maxlength="3" placeholder="255" required>
+            </div>
+
+            <p id="neoncontroller_label" style="font-size: 0.99vh; top: 32.3%; left: 8%;">Green</p>
+            <div id="neoncontroller_green_inputbox" style="top: 37.9%; left: 8%;">
+                <input id="neoncontroller_green_input" type="number" maxlength="3" placeholder="255" required>
+            </div>
+
+            <p id="neoncontroller_label" style="font-size: 0.99vh; top: 44.6%; left: 8%;">Blue</p>
+            <div id="neoncontroller_blue_inputbox" style="top: 50.2%; left: 8%;">
+                <input id="neoncontroller_blue_input" type="number" maxlength="3" placeholder="255" required>
+            </div>
+
+            <button id="neoncontroller_savebutton" onclick="NeonSaveButtonClicked();">Save</button>
+            <button id="neoncontroller_sequencebutton" onclick="NeonSequenceButtonClicked();">Sequence</button>
+            <button id="neoncontroller_flashbutton" onclick="NeonFlashButtonClicked();">Flash</button>
+            <button id="neoncontroller_offbutton" onclick="NeonOffButtonClicked();">Off</button>
+            <button id="neoncontroller_onbutton" onclick="NeonOnButtonClicked();">On</button>
+        </div>
+    </body>
+
+    <!-- LOAD JAVASCRIPTS HERE -->
+    <script src="js/boombox.js"></script>
+    <script src="js/neons.js"></script>
+</html>

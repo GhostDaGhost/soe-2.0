@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-in {
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-600%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-600%);
+    }
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+.no-focus:focus,
+.focus:focus {
+    outline: 0 !important;
+    outline-style: none;
+    box-shadow: none !important;
+    border-color: transparent;
+}
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn.focus:active,
+.btn:active:focus,
+.btn:focus {
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus {
+    outline: 0 !important;
+    outline-style: none;
+    box-shadow: none !important;
+    border-color: transparent;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+/*custom styles*/
+.no-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url(https://soe.gg/loadscreen/);
+    background-size: cover;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+}
+
+/* total width */
+::-webkit-scrollbar {
+    width: 6px
+}
+
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: #babac0;
+    border-radius: 16px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+    display: none
+}
+
+.wrapper {
+    width: 90%;
+    height: 800px;
+    /*background: linear-gradient(270deg, rgba(0,0,0, 0.7), rgba(0,0,0,0.7));*/
+    background-size: 400% 400%;
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.logo {
+    margin: 0 auto;
+    display: block;
+    height: 60px;
+}
+
+#form-wizard {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#form-wizard li {
+    float: left;
+    margin: 0 .5em 0 1em;
+    width: 30.8%;
+}
+
+@media only screen and (max-height: 901px) and (max-width: 1450px) {
+    #form-wizard {
+        display: none;
+    }
+}
+
+#form-wizard a {
+    font-size: 1.2rem;
+    background: #9E9E9E;
+    padding: .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: #5E5E5E;
+    position: relative;
+    width: 100%;
+}
+
+#form-wizard a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-width: 1.5em 0 1.5em 1em;
+    border-style: solid;
+    border-color: #9E9E9E #9E9E9E #9E9E9E transparent;
+    left: -1em;
+}
+
+#form-wizard a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #9E9E9E;
+    right: -1em;
+}
+
+#form-wizard .current {
+    background-color: #940000;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#form-wizard .current::after {
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #940000;
+}
+
+#form-wizard .current::before {
+    border-color: #940000 #940000 #940000 transparent;
+}
+
+.panel {
+    display: block;
+    position: absolute;
+    left: inherit;
+    top: inherit;
+    width: 1110px;
+    height: 600px;
+    background-color: rgba(20, 20, 20, 0.97);
+    margin: 0;
+    margin-top: 40px;
+    border: 2px solid #940000;
+    padding: 20px;
+    color: white;
+    -webkit-transform: translateX(600%);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.panel-off {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+
+.panel-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #940000;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0.2rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #9E9E9E;
+    margin: 5px;
+    font-size: 1rem;
+    color: white;
+}
+
+.nav a:hover {
+    -moz-box-shadow: inset 0 0 3px #000000;
+    -webkit-box-shadow: inset 0 0 3px #000000;
+    box-shadow: inset 0 0 3px #000000;
+}
+
+.nav a.active:hover {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.tab-pane {
+    padding: 5px;
+}
+
+.input {
+    background: none;
+    border: none;
+    color: white;
+    padding-left: 0px;
+    border-radius: 0;
+    border-bottom: 2px solid white;
+}
+
+.input:focus,
+textarea:focus {
+    outline: none;
+    color: white;
+    background: none;
+    border-radius: 0;
+    border-bottom: 2px solid white;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.tab-pane .login-form .form-group {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.tab-pane .register-form .form-group {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.tab-pane .newCharacter-form .form-group {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.tab-pane .form-group .btn {
+    background-color: #00942A;
+}
+
+#pills-help {
+    overflow-x: auto;
+    height: 500px;
+}
+
+.characters-container {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.characters-container .character {
+    width: 518px;
+    margin: 10px;
+    border: 2px solid #940000;
+}
+
+.character:hover {
+    background-color: rgba(148, 0, 0, 0.3);
+    cursor: pointer
+}
+
+.character {
+    position: relative;
+    height: 80px;
+}
+
+.character p {
+    margin: 0;
+}
+
+.character h4 {
+    font-size: 1.2rem;
+}
+
+.character .character-name {
+    top: 18px;
+    position: absolute;
+    right: 300px;
+    font-size: 1.1rem;
+}
+
+.character .character-dob {
+    position: absolute;
+    right: 300px;
+    top: 38px;
+    font-size: 0.8rem;
+}
+
+.character .employment-logo {
+    position: absolute;
+    width: 70px;
+}
+
+.character .employment-employer {
+    top: 18px;
+    position: absolute;
+    left: 300px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.character .employment-title {
+    position: absolute;
+    left: 300px;
+    top: 38px;
+    font-size: 0.8rem;
+}
+
+.new-character {
+    width: 520px;
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    background-color: #1c7430;
+    color: white;
+}
+
+.new-character:hover {
+    background-color: #1A8A54;
+    color: white;
+}
+
+.btn-group-toggle .btn {
+    background-color: #760000;
+    border-color: #760000;
+    color: #777;
+}
+
+.btn-group-toggle .btn.active {
+    background-color: #940000 !important;
+    border-color: #760000 !important;
+    color: white;
+}
+
+.spawns-container {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+}
+
+.spawns-container .spawn {
+    width: 518px;
+    margin: 10px;
+    border: 2px solid #940000;
+}
+
+.spawn:hover {
+    background-color: rgba(148, 0, 0, 0.3);
+    cursor: pointer
+}
+
+.spawn {
+    position: relative;
+    height: 85px;
+}
+
+.spawn p {
+    margin: 0;
+}
+
+.spawn .spawn-name {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+}
+
+.spawn .spawn-description {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+
+.spawn .spawn-cost {
+    font-size: 1.3rem;
+    color: #1c7430;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}

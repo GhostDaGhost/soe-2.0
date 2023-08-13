@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+      "outDir": "./html/",
+      "noImplicitAny": false,
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "moduleResolution": "node",
+      
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+  },
+  "include": [
+      "src/*",
+      "src/Notifications/*",
+      "src/Status/*",
+      "src/Tablet/*",
+      "src/Vehicle/*",
+      "src/Utils/*",
+      "src/Settings/*",
+      "src/FoodMenu/*",
+      "src/SFX/*",
+      "src/License/*"
+  ],
+  "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
+  ]
+}

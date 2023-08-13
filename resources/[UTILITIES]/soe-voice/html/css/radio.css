@@ -1,0 +1,284 @@
+* {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Digital-7';
+    src: url("nui://soe-voice/html/fonts/digital-7.regular.ttf");
+}
+
+::-webkit-input-placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.talking {
+    color: rgba(244, 196, 65, 255);
+}
+
+#radiolist_header {
+    color: white;
+    margin-top: 2%;
+
+    font-size: 1.2vh;
+    font-family: verdana;
+
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+#radiolist_container {
+    width: 10vw;
+    height: 42vh;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+
+    top: 15%;
+    right: -50%;
+    display: none;
+
+    position: absolute;
+    border-radius: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+.radiolist::-webkit-scrollbar {
+    display: none;
+}
+
+.radiolist {
+    position: absolute;
+    top: 5%;
+
+    right: 0%;
+    text-align: left;
+    padding: 5px;
+
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+
+    font-size: 1.2vh;
+    overflow-y: scroll;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#radio_container {
+    right: 5%;
+    bottom: -80%;
+    display: block;
+    user-select: none;
+    position: absolute;
+}
+
+#radio_image {
+    width: 10vw;
+    height: 68vh;
+}
+
+#radio_channel {
+    width: 4vw;
+    height: 4vh;
+
+    right: 26.5%;
+    bottom: 26.5%;
+    position: absolute;
+}
+
+#radio_channel-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+#radio_channel-input {
+    resize: none;
+    border: none;
+    outline: none;
+    position: relative;
+
+    width: 3.5vw;
+    height: 2.5vh;
+
+    font-size: 2vh;
+    text-align: center;
+    font-family: 'Digital-7';
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+#radio_power {
+    width: 2.9vw;
+    height: 13.5vh;
+
+    right: 5%;
+    bottom: 56.5%;
+    position: absolute;
+    /*background-color: rgba(158, 0, 0, 0.56);*/
+}
+
+#radio_volume {
+    height: 7vh;
+    width: 2.3vw;
+
+    right: 37%;
+    bottom: 56.5%;
+    position: absolute;
+    /*background-color: rgba(47, 0, 158, 0.56);*/
+}
+
+#radio_micclicks {
+    height: 5vh;
+    width: 2.3vw;
+
+    right: 65%;
+    bottom: 55.3%;
+    position: absolute;
+    /*background-color: rgba(0, 158, 92, 0.56);*/
+}
+
+#radio_micclicks_onvariant {
+    height: 4.7vh;
+    width: 2vw;
+
+    right: 64.1%;
+    bottom: 17.3%;
+    position: absolute;
+    /*background-color: rgba(0, 158, 92, 0.56);*/
+}
+
+#radio_micclicks_offvariant {
+    height: 4.7vh;
+    width: 2vw;
+
+    right: 13.8%;
+    bottom: 17.3%;
+    position: absolute;
+    /*background-color: rgba(7, 63, 167, 0.575);*/
+}
+
+#radio_submix {
+    height: 2vh;
+    width: 2vw;
+
+    right: 16.8%;
+    bottom: 4.8%;
+    position: absolute;
+    /*background-color: rgba(0, 158, 92, 0.56);*/
+}
+
+#radio_clicksvolume {
+    height: 6vh;
+    width: 1.4vw;
+
+    right: 88.9%;
+    bottom: 34.7%;
+    position: absolute;
+    /* background-color: rgba(3, 0, 158, 0.56); */
+}
+
+#radio_info {
+    color: white;
+    position: absolute;
+    text-align: center;
+
+    font-size: 1.26vh;
+    font-family: verdana;
+    border-radius: 0.5vh;
+
+    background-color: rgba(0, 0, 0, 0.73);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+/*#radiofx_container {
+    width: 35vw;
+    height: 38vh;
+
+    left: 33%;
+    bottom: 35%;
+
+    position: absolute;
+    border-radius: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+#radiofx_maintitle {
+    color: white;
+    font-size: 3.1vh;
+    font-family: verdana;
+
+    left: 23%;
+    bottom: 74%;
+
+    user-select: none;
+    position: absolute;
+}
+
+#radiofx_savebutton {
+    width: 5.5vw;
+    height: 5.5vh;
+    font-size: 2.5vh;
+    font-family: verdana;
+
+    bottom: 8%;
+    right: 43.9%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(13, 153, 0, 0.78);
+}
+
+#radiofx_title_1 {
+    color: white;
+    position: absolute;
+
+    font-size: 2.5vh;
+    user-select: none;
+    font-family: verdana;
+}
+
+#radiofx_inputbox {
+    position: absolute;
+}
+
+#radiofx_input_lowfreq {
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#radiofx_input_lowfreq::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.486);
+}
+
+#radiofx_input_highfreq {
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#radiofx_input_highfreq::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.486);
+}
+
+#radiofx_input_fudge {
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#radiofx_input_fudge::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.486);
+}*/

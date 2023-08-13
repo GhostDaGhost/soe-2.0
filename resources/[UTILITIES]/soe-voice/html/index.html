@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SoE Voice</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- LOAD GAME JQUERY -->
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+        <!-- RADIO CSS STYLESHEET -->
+        <link rel="stylesheet" href="css/radio.css" type="text/css">
+    </head>
+
+    <body>
+        <!-- RADIO DISPATCH LIST -->
+        <div id="radiolist_container">
+            <p id="radiolist_header">Radio Frequency - 0</p>
+            <div class="radiolist" id="voice_radiolist"></div>
+        </div>
+
+        <!-- RADIO -->
+        <div id="radio_container" style="display: none;">
+            <img src="img/radio.png" id="radio_image">
+
+            <div id="radio_power"></div>
+            <div id="radio_volume"></div>
+            <div id="radio_micclicks"></div>
+            <div id="radio_micclicks_onvariant"></div>
+            <div id="radio_micclicks_offvariant"></div>
+            <div id="radio_submix"></div>
+            <div id="radio_clicksvolume"></div>
+
+            <div id="radio_channel">
+                <input id="radio_channel-input" type="number" maxlength="4" placeholder="1-1000">
+            </div>
+        </div>
+
+        <!-- RADIOFX SETTINGS UI (MUMBLE PART DOES NOT WORK AS INTENDED BUT HERE'S A BASE WIP :)) -->
+        <!--<div id="radiofx_container" style="display: none;">
+            <p id="radiofx_maintitle">RadioFX Configuration</p>
+
+            <p id="radiofx_title_1" style="font-size: 1.2vh; top: 25.3%; left: 7.6%;">Low Freq:</p>
+            <div id="radiofx_inputbox" style="top: 37.1%; left: 7.6%; width: 3.5vw;">
+                <input id="radiofx_input_lowfreq" placeholder="300.0" maxlength="10" required>
+            </div>
+
+            <p id="radiofx_title_1" style="font-size: 1.2vh; top: 25.3%; left: 23.1%;">High Freq:</p>
+            <div id="radiofx_inputbox" style="top: 37.1%; left: 23.1%; width: 3.5vw;">
+                <input id="radiofx_input_highfreq" placeholder="6000.0" maxlength="10" required>
+            </div>
+
+            <p id="radiofx_title_1" style="font-size: 1.2vh; top: 25.3%; left: 40.5%;">Fudge:</p>
+            <div id="radiofx_inputbox" style="top: 37.1%; left: 40.5%; width: 3.5vw;">
+                <input id="radiofx_input_fudge" placeholder="6000.0" maxlength="10" required>
+            </div>
+
+            <button id="radiofx_savebutton" onclick="SaveButtonClicked();">SAVE</button>
+        </div>-->
+    </body>
+
+    <!-- LOAD JAVASCRIPTS HERE -->
+    <script src="js/radio.js" type="text/javascript"></script>
+</html>

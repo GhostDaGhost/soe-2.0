@@ -1,0 +1,41 @@
+#help {
+    display: none;
+}
+
+.menulist {
+    height: 79%;
+}
+
+.menulink {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.menulist:hover {
+    background-color: #537391;
+    transition: 0.5s;
+}
+
+#commands {
+    width: 50%;
+    margin: 0px;
+    float: left;
+}
+
+#commands ul li {
+    margin-bottom: 5px;
+}
+
+#controls ul li {
+    margin-bottom: 5px;
+}
+
+#controls {
+    width: 50%;
+    float: left;
+}
+
+ul {
+    color: white;
+}

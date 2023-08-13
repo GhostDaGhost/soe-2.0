@@ -1,0 +1,33 @@
+{
+    "name": "soe-ui",
+    "version": "1.0.0",
+    "description": "SoE UI for SOE",
+    "main": "index.js",
+    "scripts": {
+      "start": "webpack-dev-server --mode development",
+      "build": "webpack",
+      "watch": "webpack --watch"
+    },
+    "author": "GhostDaGhost",
+    "license": "GPL-3.0-or-later",
+    "devDependencies": {
+      "@types/dragula": "^3.7.0",
+      "@types/jquery": "^3.5.5",
+      "@types/react": "^17.0.3",
+      "@types/react-dom": "^17.0.3",
+      "amd-loader": "0.0.8",
+      "commonjs": "0.0.1",
+      "dragula": "^3.7.3",
+      "jquery": "^3.6.0",
+      "ts-loader": "^8.1.0",
+      "typescript": "^4.2.4",
+      "webpack": "^5.38.1",
+      "webpack-cli": "^4.6.0",
+      "webpack-dev-server": "^3.11.2",
+      "howler": "^2.2.3"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    }
+}

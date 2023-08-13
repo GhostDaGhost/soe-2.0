@@ -1,0 +1,82 @@
+* {
+    font-family: verdana;
+    overflow: hidden;
+}
+
+#boombox_container {
+    width: 35vw;
+    height: 30vh;
+
+    left: 33%;
+    bottom: 35%;
+
+    position: absolute;
+    border-radius: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+#boombox_maintitle {
+    color: white;
+    font-size: 3.1vh;
+
+    left: 25%;
+    bottom: 74%;
+
+    user-select: none;
+    position: absolute;
+}
+
+#boombox_url_inputbox {
+    position: absolute;
+}
+
+#boombox_url_input {
+    width: 30.2vw;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#boombox_url_title {
+    color: white;
+    position: absolute;
+
+    font-size: 2.5vh;
+    user-select: none;
+}
+
+#boombox_playbutton {
+    width: 5.5vw;
+    height: 5.5vh;
+    font-size: 2.5vh;
+
+    bottom: 10%;
+    right: 33.5%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(13, 153, 0, 0.78);
+}
+
+#boombox_pausebutton {
+    width: 5.5vw;
+    height: 5.5vh;
+    font-size: 2.5vh;
+
+    bottom: 10%;
+    right: 55.8%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(16, 87, 219, 0.78);
+}

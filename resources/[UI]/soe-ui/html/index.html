@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SoE UI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- LOAD UP GAME JQUERY AND FONT AWESOME API -->
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/2b2a8af196.js" crossorigin="anonymous"></script>
+
+        <!-- CSS STYLESHEETS -->
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="css/status.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <!-- ROUNDED MINIMAP BORDER -->
+        <div id="roundminimap_border"></div>
+
+        <!-- TEXT ON SCREEN -->
+        <div id="onscreen_text"></div>
+
+        <!-- FOOD MENU -->
+        <div id="foodmenu_container"></div>
+
+        <!-- MYTHIC NOTIFICATIONS -->
+        <div class="notif-container"></div>
+        <div id="notification-logs"></div>
+
+        <!-- TOOLTIPS -->
+        <div class="tooltip_container">
+            <div id="tooltip_text">[E] Interact</div>
+        </div>
+
+        <!-- CINEMATIC BLACK BOXES -->
+        <div id="blackboxes_container">
+            <div class="blackboxes_style" id="blackboxes_box1"></div>
+            <div class="blackboxes_style" id="blackboxes_box2"></div>
+        </div>
+
+        <!-- TABLET -->
+        <div id="tablet_container">
+            <img src="img/tablet.png" id="tablet_image">
+            <iframe src="https://core.soe.gg/" id="tablet_content"></iframe>
+        </div>
+
+        <!-- PLAYER COUNTER UI -->
+        <div id="counter_container">
+            <div id="counter_background">
+                <div id="counter_text"></div>
+            </div>
+        </div>
+
+        <!-- STATUS CIRCLES -->
+        <div id="status_circles-container">
+            <div class="info player">
+                <div id="status">
+                    <ul>
+                        <li class="icon" id="voice" style="display:block;"><i class="fas fa-microphone"></i><span></span></li>
+                        <li class="icon" id="oxygen" style="display:block;"><i class="fas fa-lungs"></i><span></span></li>
+                        <li class="icon" id="thirst" style="display:block;"><i class="fas fa-tint"></i><span></span></li>
+                        <li class="icon" id="hunger" style="display:block;"><i class="fas fa-hamburger"></i><span></span></li>
+                        <li class="icon" id="armor" style="display:block;"><i class="fas fa-shield-alt"></i><span></span></li>
+                        <li class="icon" id="health" style="display:block;"><i class="fas fa-heart"></i><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- VEHICLE UI -->
+        <div class="carhud-container">
+            <div class="car-street"></div>
+            <div class="car-streetOnTop"></div>
+            <div class="car-time"><span class="time-text">00:00</span></div>
+            <div class="car-locks"><img src="img/locks.png" width="25vw" height="25vh"></div>
+            <div class="car-engine"><img src="img/engine.png" width="25vw" height="25vh"></div>
+            <div class="car-seatbelt"><img src="img/belt.png" width="25vw" height="25vh"></div>
+            <div class="car-fuel"><span class="fuel-text">0</span> <span class="fuel-label">FUEL</span></div>
+            <div class="car-speed"><span class="speed-text">0</span> <span class="speed-type">MPH</span></div>
+            <div class="aircraft-speed"><span class="aircraft-speed-text">0</span><span class="aircraft-speed-label">KNTS</span></div>
+        </div>
+
+        <!-- SETTINGS UI -->
+        <div id="settings_container">
+            <div id="settings_pages">
+                <button class="settings_pagebutton">General</button>
+                <button class="settings_pagebutton">UI</button>
+            </div>
+
+            <button id="settings_resetbutton">Reset</button>
+            <button id="settings_savebutton">Save</button>
+            <div id="settings_content">
+            </div>
+        </div>
+
+        <!-- LICENSES -->
+        <div id="license_container">
+            <img src="img/driver_license.png" id="license_backgroundimage">
+            <img src="" id="license_personimage">
+
+            <p id="license_signature">F. Lastname</p>
+
+            <p id="license_id" class="license_label">DL</p>
+            <p id="license_expiry" class="license_label">EXP</p>
+            <p id="license_issued" class="license_label">ISS</p>
+            <p id="license_lastgiven" class="license_label">LN</p>
+            <p id="license_firstgiven" class="license_label">FN</p>
+            <p id="license_dob" class="license_label">DOB</p>
+            <p id="license_gender" class="license_label">SEX</p>
+            <p id="license_ssn" class="license_label">SSN</p>
+        </div>
+    </body>
+
+    <!-- LOAD UP JAVASCRIPTS -->
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/counter.js" type="text/javascript"></script>
+
+    <!-- LOAD MOMENT APIs -->
+    <script src="js/moment/moment-with-locales.min.js" type="text/javascript"></script>
+    <script src="js/moment/moment-timezone-with-data-2012-2022.min.js" type="text/javascript"></script>
+    <script src="js/moment/moment-precise-range.js" type="text/javascript"></script>
+</html>

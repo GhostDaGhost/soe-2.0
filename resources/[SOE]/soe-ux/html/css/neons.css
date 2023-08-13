@@ -1,0 +1,158 @@
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.486);
+}
+
+#neoncontroller_container {
+    width: 15vw;
+    height: 43vh;
+
+    left: 42.7%;
+    bottom: 35%;
+
+    position: absolute;
+    border-radius: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+#neoncontroller_maintitle {
+    color: white;
+    font-size: 1.7vh;
+
+    left: 9%;
+    bottom: 87%;
+
+    user-select: none;
+    position: absolute;
+}
+
+#neoncontroller_red_inputbox {
+    position: absolute;
+}
+
+#neoncontroller_red_input {
+    width: 3vw;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#neoncontroller_green_inputbox {
+    position: absolute;
+}
+
+#neoncontroller_green_input {
+    width: 3vw;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#neoncontroller_blue_inputbox {
+    position: absolute;
+}
+
+#neoncontroller_blue_input {
+    width: 3vw;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    color: white;
+    border-radius: 0;
+    border-bottom: 0.1vh solid white;
+}
+
+#neoncontroller_label {
+    color: white;
+    position: absolute;
+
+    font-size: 2.5vh;
+    user-select: none;
+}
+
+#neoncontroller_savebutton {
+    width: 2.5vw;
+    height: 2.5vh;
+    font-size: 1.3vh;
+
+    top: 58.7%;
+    left: 9.5%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(13, 153, 0, 0.78);
+}
+
+#neoncontroller_sequencebutton {
+    width: 5.5vw;
+    height: 4vh;
+    font-size: 1.6vh;
+
+    top: 22.2%;
+    left: 55%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(16, 87, 219, 0.78);
+}
+
+#neoncontroller_flashbutton {
+    width: 5.5vw;
+    height: 4vh;
+    font-size: 1.8vh;
+
+    top: 37%;
+    left: 55%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(195, 16, 219, 0.78);
+}
+
+#neoncontroller_offbutton {
+    width: 5.5vw;
+    height: 4vh;
+    font-size: 1.8vh;
+
+    top: 51.6%;
+    left: 55%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(110, 0, 0, 0.78);
+}
+
+#neoncontroller_onbutton {
+    width: 5.5vw;
+    height: 4vh;
+    font-size: 1.8vh;
+
+    top: 67.2%;
+    left: 55%;
+    position: absolute;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(0, 110, 0, 0.78);
+}

@@ -1,0 +1,59 @@
+numberpad {
+    background-color: rgba(0,0,0,0);
+    width: 244px;
+    display: inline-block;
+}
+
+numberpad > block {
+    float: left;
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+    background-color: #d5cdc4;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 10px;
+    border-color: black;
+    cursor: pointer;
+}
+
+numberpad > block:hover {
+    background-color: gray;
+    transition: ease .1s;
+}
+
+numberpad > block[cancel] {
+    background-color: #dc3545;
+}
+
+numberpad > block[submit] {
+    background-color: #28a745;
+}
+
+numberpad > block[cancel]:hover {
+    color: white;
+}
+
+numberpad > block[submit]:hover {
+    color: white;
+}
+
+input[pin] {
+    width: 27.5%;
+    height: 75px;
+    text-align: center;
+    background-color: rgba(0,0,0,.25);
+    display: inline-block;
+    color: white;
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: black;
+    font-weight: bold;
+    font-size: 35px;
+    -webkit-text-security: disc;
+}

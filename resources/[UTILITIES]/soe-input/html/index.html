@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SoE Textbox</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="wrapper" style="display: block">
+        <div class="popup" style="display: none">
+            <div class="error-popup" style="display: none">
+                <p><b>ERROR</b> <br> <span class="error-text"></span></p>
+            </div>
+            <div class="title text-center"></div>
+            <input type="text" autofocus="autofocus" class="form-control popup-value">
+            <div class="btn-group form-group popup-buttons">
+                <button class="btn btn-dark mt-2 disabled confirm-button" disabled>Confirm</button>
+                <button class="btn btn-danger mt-2 cancel-button">Cancel</button>
+            </div>
+        </div>
+
+        <div class="popup2" style="display: none">
+            <div class="title text-center"></div>
+            <div class="btn-group form-group popup-buttons">
+                <button class="btn btn-success mt-2 confirm-button-2">Confirm</button>
+                <button class="btn btn-danger mt-2 cancel-button-2">Cancel</button>
+            </div>
+        </div>
+
+        <div class="popup3" style="display: none">
+            <div class="title text-center"></div>
+            <select autofocus="autofocus" id ="popup-select" class="form-control bg-light text-dark">
+                <option value="TEST">TEST</option>
+            </select>
+            <div class="btn-group form-group popup-buttons">
+                <button class="btn btn-success mt-2 confirm-button-3">Confirm</button>
+                <button class="btn btn-danger mt-2 cancel-button-3">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2b2a8af196.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

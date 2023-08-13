@@ -1,0 +1,122 @@
+*, :before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes status-blink {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#status_circles-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.separator {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+
+.icon {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    width: 1.77vw;
+    height: 2.93vh;
+    border-radius: 20vh;
+    margin: 0.55vh;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.icon i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 11;
+    font-size: 1.38vh;
+}
+
+.icon span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    position: absolute;
+}
+
+.icon.dying:not(.customstatus) span {
+    animation: status-blink 650ms infinite;
+}
+
+.info.player {
+    top: 95.3%;
+    right: 84.35%;
+}
+
+.info.player #status {
+    clear: both;
+}
+
+.info.player #status ul {
+    margin: 10px 0 0 0;
+}
+
+.info.player #status ul li {
+    float: right;
+}
+
+.info.player #status ul li#health span {
+    background: #48aa38;
+    transition: .2s ease-in-out;
+}
+
+.info.player #status ul li#armor span {
+    background: #007fd3;
+    transition: .2s ease-in-out;
+}
+
+.info.player #status ul li#hunger span {
+    background: #f0932b;
+    transition: .2s ease-in-out;
+}
+
+.info.player #status ul li#thirst span {
+    background: #27428a;
+    transition: .2s ease-in-out;
+}
+
+.info.player #status ul li#stamina span {
+    background: #af47c2;
+    transition: .2s ease-in-out;
+}
+
+.info.player #status ul li#oxygen span {
+    background: #7282ad;
+    transition: .2s ease-in-out;
+}
+
+.info.player #status ul li#voice span {
+    background: #747474;
+    transition: .2s ease-in-out;
+}

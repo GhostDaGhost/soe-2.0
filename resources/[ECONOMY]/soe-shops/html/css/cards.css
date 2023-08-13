@@ -1,0 +1,102 @@
+.debit-card-container {
+  overflow-y: auto; 
+  position: absolute;
+  height: 100vh !important;
+  z-index: 100;
+  transition: .5s ease;
+}
+
+.debit-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.debit-card-container::-webkit-scrollbar {
+  -ms-overflow-style: none;
+}
+
+.card-wrapper {
+  height: 205px;
+  width: 340px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.card-wrapper:hover .card {
+  left: 5px;
+}
+
+.card-wrapper > .active, .card-wrapper > .active:hover {
+  left: 10px;
+}
+
+.card {
+  z-index: 200;
+  left: -225px;
+  transition: .5s ease;
+  position: absolute;
+  background: #ACAEA9;
+  border-radius: 1rem !important;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  width: 340px;
+  box-shadow: 1.25px 2.5px #888888;
+  font: 400 .875em 'Helvetica Neue', 'Roboto Sans', Helvetica, Arial, Sans-serif;
+  overflow: hidden;
+  color: #fff;
+}
+
+.card > .head {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 16px 0 16px;
+}
+
+.card > .head > .card-type > .title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.card > .head > .bank > .logo {
+  width: 100px;
+}
+
+.card > .main {
+  margin: 35px 16px 0 16px;
+}
+
+.card > .main > .card-number {
+  font-size: 24px;
+  text-align: center;
+}
+
+.card > .foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 16px 16px 16px;
+  padding: 0px 15px 0px 15px;
+}
+
+.card > .foot > .account {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 115px;
+}
+
+.card > .foot > .account > .number {
+  display: flex;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.card > .foot > .dates {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 115px;
+}
+
+.card > .foot > .dates > .number {
+  font-weight: bold;
+}

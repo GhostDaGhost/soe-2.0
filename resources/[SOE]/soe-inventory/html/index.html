@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SoE Inventory</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="zwicon.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Item Template -->
+    <div class="item" data-toggle="tooltip" id="inventory-item-template" style="display: none;">
+        <img>
+        <div class="amount"></div>
+        <div class="weight"></div>
+        <div class="name"></div>
+    </div>
+
+    <div class="wrapper" style="display: none">
+        <div class="container-fluid h-100">
+
+            <div class="row align-items-center h-100 inventory-row">
+                <p class="full-width text-center dev-text text-danger" style="display: none"></p>
+                <div class="col-5 mx-auto">
+
+                    <!-- Left Inventory Panel -->
+                    <div class="col-left" style="display: none;">
+                        <div class="inventory-title-bar">
+                            <div class="inventory-title-left"></div>
+                        </div>
+                        <div class="inventory no-select">
+                            <div id="left">
+
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="inventory-1-weight"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-2 mx-auto">
+                    <div class="inventory-title-bar">
+                        <div class="inventory-title-hands">Hands</div>
+                    </div>
+                    <div class="options">
+
+                        <div id="hand" class="no-select">
+
+                        </div>
+                        <div class="description">
+                            <p class="description-text"></p>
+                        </div>
+                        <div class="mt-5">
+                            <div class="form-group">
+                                <label for="amount" class="text-center full-width">Amount</label>
+                                <input type="number" name="amount" id="input-amount" class="form-control" value="1" max="1000" />
+                            </div>
+                            <div class="form-group quanity-buttons">
+                                <button class="btn btn-sm btn-light disabled min-button" disabled="">Min</button>
+                                <button class="btn btn-sm btn-light disabled half-button" disabled="">Half</button>
+                                <button class="btn btn-sm btn-light disabled max-button" disabled="">Max</button>
+                            </div>
+                            <!-- <button class="btn btn-md btn-dark full-width mt-2 disabled give-button" disabled="">Give</button> -->
+                            <button class="btn btn-md btn-dark full-width mt-2 disabled use-button" disabled="">Use</button>
+                            <button class="btn btn-md btn-dark full-width mt-2 disabled drop-button" disabled="">Drop</button>
+                            <button class="btn btn-md btn-dark full-width mt-2 disabled split-button" disabled="">Split</button>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="inventory-hand-weight">0 lbs</div>
+                    </div>
+                </div>
+                <div class="col-5 mx-auto ">
+
+                    <!-- Right Inventory Panel -->
+                    <div class="col-right" style="display: none;">
+                        <div class="inventory-title-bar">
+                            <div class="inventory-title-right"></div>
+                        </div>
+                        <div class="inventory no-select">
+                            <div id="right">
+
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="inventory-2-weight"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="popup" style="display: none">
+            <div class="title text-center"></div>
+            <input type="text" minlength="1" maxlength="10" class="form-control popup-value">
+            <div class="btn-group form-group quanity-buttons">
+                <button class="btn btn-dark mt-2 disabled confirm-button" disabled>Confirm</button>
+                <button class="btn btn-danger mt-2 cancel-button">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="alert-container">
+
+    </div>
+    <div class="table-container" style="display: none">
+        <div class="container-fluid h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-10 mx-auto">
+                    <div class="col-left">
+                        <div class="datatable-title-bar">
+                            <div class="datatable-title-left">Table</div>
+                        </div>
+                        <div class="datatable no-select">
+                            <div class="table-responsive table-hover data-table">
+                                <table id="data-table" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Photo</th>
+                                            <th>Tag #</th>
+                                            <th>Item(s)</th>
+                                            <th>Amount</th>
+                                            <th>Storage Location</th>
+                                            <th>Booking Officer</th>
+                                            <th>Booking Department</th>
+                                            <th>Event #</th>
+                                            <th>Date/Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js'></script>
+    <script src="https://kit.fontawesome.com/2b2a8af196.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="controller.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@font-face {
+    font-family: Airin;
+    src: url("nui://soe-ui/html/fonts/Airin.ttf");
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: #3d3d3d;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    display: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255);
+    display: none;
+}
+
+#license_container {
+    display: none;
+    width: 23.5vw;
+    height: 24.1vh;
+
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
+}
+
+#license_backgroundimage {
+    width: 23vw;
+    height: 23vh;
+
+    right: 1.5%;
+    bottom: 2%;
+    position: absolute;
+
+    border-radius: 1vh;
+}
+
+#license_personimage {
+    width: 7.3vw;
+    height: 13.8vh;
+
+    bottom: 20%;
+    margin-left: 4%;
+    position: absolute;
+}
+
+#license_signature {
+    font-family: 'Airin';
+    font-size: 2.2vh;
+
+    bottom: 8.2%;
+    margin-left: 10.95%;
+    position: absolute;
+}
+
+.license_label {
+    font-weight: bold;
+    font-size: 1.4vh;
+    font-family: 'Arial';
+
+    position: absolute;
+    color: rgb(102, 102, 151);
+}
+
+.license_data {
+    font-weight: 600;
+    font-size: 1.55vh;
+    font-family: 'Arial';
+
+    color: black;
+}
+
+#license_id {
+    left: 36.3%;
+    top: 22.5%;
+}
+
+#license_expiry {
+    left: 36.3%;
+    top: 33%;
+}
+
+#license_issued {
+    left: 36.3%;
+    top: 42%;
+}
+
+#license_lastgiven {
+    left: 36.3%;
+    top: 53%;
+}
+
+#license_firstgiven {
+    left: 36.3%;
+    top: 60.9%;
+}
+
+#license_dob {
+    left: 36.3%;
+    top: 70.5%;
+}
+
+#license_gender {
+    left: 36.3%;
+    top: 82%;
+}
+
+#license_ssn {
+    right: 17%;
+    top: 22.5%;
+}
+
+#roundminimap_border {
+    width: 15vw;
+    height: 26vh;
+
+    left: 1.54%;
+    bottom: 4.7%;
+    position: absolute;
+    display: none;
+
+    border-radius: 25vh;
+    border: 0.15vh solid #a0a0a0;
+}
+
+#foodmenu_container {
+    right: 31%;
+    top: -105%;
+
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+#blackboxes_container {
+    display: none;
+}
+
+.blackboxes_style {
+    width: 100vw;
+    height: 20vh;
+
+    z-index: 999999999;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+}
+
+#blackboxes_box1 {
+    bottom: 0%;
+}
+
+#blackboxes_box2 {
+    top: 0%;
+}
+
+#settings_container {
+    display: none;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+
+    width: 35vw;
+    height: 55vh;
+
+    left: 33%;
+    bottom: 24%;
+    z-index: 999999999;
+
+    border-radius: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+.settings_pagebutton:hover {
+    transition: .2s ease-in-out;
+    background-color: rgb(145, 145, 145);
+    color: white;
+}
+
+.settings_pagebutton {
+    font-size: 1.8vh;
+    font-family: verdana;
+    color: white;
+
+    position: relative;
+    user-select: none;
+    background: none;
+
+    left: 1%;
+    margin: 1%;
+    line-height: 2.5vh;
+    border-color: #f6d46500;
+
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+}
+
+#settings_pages {
+    position: absolute;
+    user-select: none;
+    top: 0%;
+
+    width: 35vw;
+    height: 4.2vh;
+    background-color: rgba(65, 65, 65, 0.548);
+}
+
+#settings_content {
+    position: relative;
+    width: 33.5vw;
+    height: 48vh;
+
+    top: 9%;
+    left: 1.8%;
+
+    overflow-y: scroll;
+    /* background-color: rgba(167, 6, 11, 0.75); DEBUGGING */
+}
+
+.settings_heading {
+    color: white;
+    font-size: 1.62vh;
+    font-family: verdana;
+
+    user-select: none;
+}
+
+.settings_label {
+    color: white;
+    font-size: 1.3vh;
+    font-family: verdana;
+
+    margin-left: 1.5%;
+    user-select: none;
+}
+
+.settings_setting_slider {
+    width: 13vw;
+    margin-top: 2%;
+    margin-left: 3.5%;
+
+    outline: none;
+	border-radius: 1vh;
+    border: 0.1vh solid #a30000f6;
+
+    transition: 2s;
+    -webkit-appearance: none;
+	background-color: #202020;
+}
+
+#settings_savebutton:hover {
+    transition: .2s ease-in-out;
+    background-color: rgb(18, 218, 0);
+}
+
+#settings_savebutton {
+    width: 2.5vw;
+    height: 2.5vh;
+    font-size: 1.65vh;
+
+    top: 1.7%;
+    right: 3%;
+    position: absolute;
+    user-select: none;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(13, 153, 0, 0.78);
+}
+
+#settings_resetbutton:hover {
+    transition: .2s ease-in-out;
+    background-color: rgb(255, 165, 47);
+}
+
+#settings_resetbutton {
+    width: 2.65vw;
+    height: 2.5vh;
+    font-size: 1.61vh;
+
+    top: 1.7%;
+    right: 12%;
+    position: absolute;
+    user-select: none;
+
+    border: none;
+    color: white;
+    border-radius: 0.5vh;
+    background-color: rgba(219, 124, 0, 0.78);
+}
+
+.settings_setting_checkbox {
+	position: relative;
+	height: 4vw;
+	width: 4vh;
+
+    margin-top: -3%;
+    margin-left: 23%;
+
+    align-items: center;
+	background: transparent;
+	justify-content: space-between;
+}
+
+.settings_setting_checkbox input {
+	outline: none;
+	height: 24px;
+	width: 55px;
+	border-radius: 1vh;
+
+	-webkit-appearance: none;
+	position: relative;
+	background: #202020;
+
+	border: 0.1vh solid #a30000f6;
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+	transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 0);
+}
+
+.settings_setting_checkbox input:before{
+	position: absolute;
+	content: "";
+
+	left: 0%;
+    width: 1vw;
+	height: 1.9vh;
+	background: rgb(29, 120, 255);
+
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+	border-radius: 1vh;
+
+	transform: scale(0.85);
+	transition: left 0.3s cubic-bezier(0.68, 0, 0.265, 1.55);
+}
+
+.settings_setting_checkbox .text:before {
+	content: "Disabled";
+
+	font-size: 1.2vh;
+	font-weight: 500;
+	color: #bfbfbf;
+}
+
+.settings_setting_checkbox input:checked {
+	border: 0.1vh solid #19be0ae1;
+}
+
+.settings_setting_checkbox input:checked:before{
+	z-index: 99;
+
+	left: 60%;
+    position: absolute;
+}
+
+.settings_setting_inputbox {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    font-family: verdana;
+
+    width: 8.7vw;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+.settings_setting_inputbox input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.507);
+}
+
+.settings_setting_inputbox input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.settings_setting_inputbox input {
+    resize: none;
+    border: none;
+	outline: none;
+    color: white;
+
+    width: 8.9vw;
+    line-height: 2vh;
+    font-family: verdana;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.settings_setting_dropdown {
+    resize: none;
+    border: none;
+	outline: none;
+    color: white;
+
+    width: 8vw;
+    font-family: verdana;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2vh solid rgba(252, 0, 0, 0.45);
+}
+
+.dropdown_option {
+    color: black;
+
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    background-color: darkgrey;
+}
+
+#counter_container {
+    display: none;
+}
+
+#counter_content {
+    font-weight: 600;
+    border-radius: 0.5vh;
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 0.2vh solid rgba(0, 0, 0, 0.35);
+}
+
+#counter_text {
+    padding: 0.5vh 0.5vh;
+    color: white;
+
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 0 0.11vh 0.11vh black;
+}
+
+#counter_background {
+    width: fit-content;
+    height: 3.5vh;
+
+    right: 40.4%;
+    bottom: 95%;
+
+    position: absolute;
+    border-radius: 0.5vh;
+    background: rgba(122, 12, 0, 0.75);
+    box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, 0.12), 0 0.2vh 0.5vh rgba(0, 0, 0, 0.24);
+}
+
+.vehicle_text {
+    left: 17%;
+    font-size: 1.47vh;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: bold;
+    position: absolute;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.548), 1px 1px 2px rgba(0, 0, 0, 0.548), 1px -1px 0 rgba(0, 0, 0, 0.548), -1px -1px 0 rgba(0, 0, 0, 0.548);
+}
+
+#vehicle_street {
+    bottom: 0.95%;
+}
+
+#vehicle_statistics {
+    bottom: 3.8%;
+}
+
+#vehicle_time {
+    bottom: 6.5%;
+}
+
+.vehicle_icon {
+    width: 1.5vw;
+    height: 2.5vh;
+    position: absolute;
+}
+
+#vehicle_belt {
+    left: 12.2%;
+    bottom: 3.2%;
+}
+
+#vehicle_locks {
+    left: 14%;
+    bottom: 3.2%;
+}
+
+#vehicle_engine {
+    left: 17.2%;
+    bottom: 8.86%;
+}
+
+#tablet_container {
+    width: 50vw;
+    height: 50vh;
+
+    right: 40%;
+    bottom: -100%;
+
+    display: none;
+    position: absolute;
+}
+
+#tablet_content {
+    height: 80vh;
+    width: 80.8vw;
+
+    right: -62%;
+    bottom: -60%;
+    position: absolute;
+}
+
+#tablet_image {
+    width: 86vw;
+    height: 86vh;
+
+    right: -67%;
+    bottom: -65%;
+
+    z-index: 999999;
+    position: absolute;
+    pointer-events: none;
+}
+
+.tooltip_container {
+	min-width: 6%;
+	min-height: 4%;
+	background-color: rgba(51, 112, 165, 0.85);
+	position: absolute;
+
+	right: -20%;
+	bottom: 14%;
+	transform: translate(0, -50%);
+	border-radius: 0.5vh;
+
+	display: none;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+    z-index: 9999;
+}
+
+#tooltip_icon {
+    color: white;
+}
+
+#tooltip_text {
+	padding: 12px;
+	color: white;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+    font-size: 1.9vh;
+	font-family: 'Roboto';
+	text-shadow: 0 0.11vh 0.11vh black;
+
+	align-content: center;
+	text-align: center;
+}
+
+.notif-container {
+    width: 20%;
+    top: 5.5%;
+    position: absolute;
+    right: 0%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.notification {
+    max-width: 80%;
+    padding: 0.93vh;
+    width: fit-content;
+    border-radius: 0.113vh;
+    margin: 0.47vh;
+    font: caption;
+    font-size: 1.25vh;
+    font-weight: bold;
+    text-shadow: 0 0.11vh 0.11vh black;
+}
+
+#notification-logs {
+    position: fixed;
+    display: none;
+
+    width: 25%;
+    height: 20%;
+    top: 70%;
+    left: 70.5%;
+    padding-left: 0.5%;
+
+    background-color: rgba(31, 31, 31, 0.705);
+    border-radius: 3vh;
+    border: 0.5vh solid rgba(148, 0, 0, 0.637);
+
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    z-index: 999999999;
+}
+
+#logged-notification {
+    font-family: "Segoe UI";
+    position: relative;
+    color: white;
+
+    font-size: 1.32vh;
+    line-height: 1.0vw;
+    margin: 2%;
+}
+
+.success {
+    background: rgba(21, 100, 15, 0.95); 
+    color: #fff;
+}
+
+.inform {
+    background-color: rgba(51, 112, 165, 0.85);
+    color: #fff;
+}
+
+.error {
+    background: rgba(167, 6, 11, 0.75);
+    color: #fff;
+}
+
+.medical {
+    background-color: rgba(51, 70, 195, 0.75);
+    color: #fff;
+}
+
+.warning {
+    background-color: rgba(216, 132, 23, 0.75);
+    color: #fff;
+}
+
+.debug {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+
+.carhud-container {
+    display: none;
+    color: white;
+    font-size: 4.2vh;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.548), 1px 1px 2px rgba(0, 0, 0, 0.548), 1px -1px 0 rgba(0, 0, 0, 0.548), -1px -1px 0 rgba(0, 0, 0, 0.548);
+}
+
+.car-speed, .car-fuel, .aircraft-speed {
+    font-size: 1.2vh;
+    position: absolute;
+    bottom: 3.8vh;
+}
+
+.car-fuel {
+    left: 21.2vw;
+}
+
+.fuel-label {
+    position: relative;
+    left: 0.2vw;
+    bottom: 0.6vh;
+    font-size: 0.93vh;
+}
+
+.speed-text, .fuel-text, .aircraft-speed-text {
+    font-size: 1.54vh;
+}
+
+.car-speed {
+    left: 17vw;
+}
+
+.aircraft-speed {
+    left: 21.27vw;
+    bottom: 7vh;
+}
+
+.speed-type {
+    position: relative;
+    left: 0.31vw;
+    bottom: 0.6vh;
+    font-size: 0.93vh;
+}
+
+.aircraft-speed-label {
+    position: relative;
+    left: 0.66vw;
+    bottom: 0.6vh;
+    font-size: 0.93vh;
+}
+
+.car-street {
+    font-size: 1.47vh;
+    position: absolute;
+    bottom: 0.95vh;
+    left: 17vw;
+}
+
+.car-streetOnTop {
+    font-size: 2.14vh;
+    position: absolute;
+    bottom: 95.23vh;
+    left: 40.02vw;
+}
+
+.car-seatbelt {
+    position: absolute;
+    left: 25vw;
+    bottom: 3.2vh;
+}
+
+.car-locks {
+    position: absolute;
+    left: 27.5vw;
+    bottom: 3.2vh;
+}
+
+.car-engine {
+    position: absolute;
+    left: 30vw;
+    bottom: 3.2vh;
+}
+
+.car-time {
+    font-size: 1.47vh;
+    position: absolute;
+    bottom: 7vh;
+    left: 17vw;
+}
+
+#onscreen_text {
+    bottom: 2.7%;
+    left: 41.4%;
+    font-size: 2.15vh;
+
+    color:white;
+    position: absolute;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.548), 1px 1px 2px rgba(0, 0, 0, 0.548), 1px -1px 0 rgba(0, 0, 0, 0.548), -1px -1px 0 rgba(0, 0, 0, 0.548);
+}
